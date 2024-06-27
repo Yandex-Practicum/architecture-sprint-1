@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - sprint-15/deploy-mesto
+  pull_request:
+    branches:
+      - sprint-15/deploy-mesto
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Backend test
+        run: docker compose run backend-test
+
+      - name: Frontend test
+        run: docker compose run frontend-test
