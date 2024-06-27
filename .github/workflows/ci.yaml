@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - sprint-15/deploy-mesto
+      - main
   pull_request:
     branches:
-      - sprint-15/deploy-mesto
+      - main
 
 jobs:
   build:
