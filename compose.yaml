@@ -46,7 +46,7 @@ services:
     build:
       context: frontend
       dockerfile: ../Dockerfile.frontend
-    command: yarn test
+    command: yarn test:microfrontend
     restart: 'no'
     environment:
           CI: true

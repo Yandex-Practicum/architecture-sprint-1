@@ -6,7 +6,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
+RUN npm install \
+    && npm i -g jest \
+    && npx playwright install --with-deps chromium
 
 CMD [ "yarn", "start" ]
 
