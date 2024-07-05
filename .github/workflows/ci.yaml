@@ -16,8 +16,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build docker containers
+        uses: docker/bake-action@v3
+        with:
+          load: true
+
       - name: Backend test
         run: docker compose run backend-test
 
       - name: Frontend test
         run: docker compose run frontend-test
+
+      - name: Cleanup
+        if: always()
+        run: docker compose down

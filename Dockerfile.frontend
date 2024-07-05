@@ -4,12 +4,14 @@ ENV NODE_ENV development
 
 WORKDIR /app
 
-COPY . .
+COPY package.json package-lock.json ./
 
 RUN npm install \
     && npm i -g jest \
     && npx playwright install --with-deps chromium
 
+COPY . .
+
 CMD [ "yarn", "start" ]
 
-EXPOSE 5000
+EXPOSE 3000
