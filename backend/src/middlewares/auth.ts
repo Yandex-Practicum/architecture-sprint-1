@@ -3,7 +3,6 @@ import { Request, Response, NextFunction } from 'express';
 import { JWT_SECRET } from '../config';
 import UnauthorizedError from '../errors/unauthorized-error';
 
-// есть файл middlewares/auth.js, в нём мидлвэр для проверки JWT;
 interface JwtPayload {
   _id: string
 }

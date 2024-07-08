@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm install \
+RUN npm i \
     && npm i -g jest \
     && npx playwright install --with-deps chromium
 

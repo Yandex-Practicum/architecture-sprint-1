@@ -19,7 +19,7 @@ const cardsSchema = new mongoose.Schema<ICard>({
   link: {
     type: String,
     required: [true, 'Поле "link" должно быть заполнено'],
-    // для проверки ссылок студентам необходимо написать регулярное выражение
+
     validate: {
       validator: (v: string) => urlRegExp.test(v),
       message: 'Поле "link" должно быть валидным url-адресом.',

@@ -1,12 +1,12 @@
 import 'dotenv/config';
 
+import { errors } from 'celebrate';
+import cookieParser from 'cookie-parser';
 import express from 'express';
 import mongoose from 'mongoose';
-import cookieParser from 'cookie-parser';
-import { errors } from 'celebrate';
 
-import errorHandler from './middlewares/error-handler';
 import { DB_ADDRESS } from './config';
+import errorHandler from './middlewares/error-handler';
 import routes from './routes';
 
 const { PORT = 3000 } = process.env;
@@ -21,4 +21,4 @@ app.use(errors());
 app.use(errorHandler);
 
 // eslint-disable-next-line no-console
-app.listen(PORT, () => console.log('ok'));
+app.listen(PORT, () => console.log(`API server started at port ${PORT}`));
