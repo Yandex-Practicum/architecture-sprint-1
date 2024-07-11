@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-07-11T05:28:32.731Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Q-VAgGzykKyWT8YKdjlx" version="24.6.4" type="github">
+  <diagram name="Страница — 1" id="lw-AJ9BotBI46i6nJfj-">
+    <mxGraphModel dx="2141" dy="1927" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--17" value="&lt;div&gt;Перенесите выбранные компоненты, стили и утилиты в соответствующие новые структуры.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="46" y="238" width="656" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--46" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="631" y="-61" width="620" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--26" value="1. В этом задании вам нужно декомпозировать веб-приложения на Django на микросервисы. Кодить не придётся: в этот раз вы будете работать в онлайн-редакторе draw.io.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;������ Мы подготовили схему архитектуры монолитного решения:&lt;/span&gt;&lt;div&gt;https://code.s3.yandex.net/software-architect/praktikum_arch_template.drawio.xml&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="YrV5XigEh4xy7u1ZsSS--46" vertex="1">
+          <mxGeometry x="36" y="34" width="576" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--39" value="Задание 2" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="YrV5XigEh4xy7u1ZsSS--46" vertex="1">
+          <mxGeometry x="7" width="104" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--41" value="2. Откройте файл со схемой в draw.io и изучите решение" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="YrV5XigEh4xy7u1ZsSS--46" vertex="1">
+          <mxGeometry x="36" y="88" width="337" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--42" value="&lt;div&gt;3. Разделите монолит на компоненты&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="YrV5XigEh4xy7u1ZsSS--46" vertex="1">
+          <mxGeometry x="36" y="107" width="337" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--43" value="4. Опишите каждый компонент" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="YrV5XigEh4xy7u1ZsSS--46" vertex="1">
+          <mxGeometry x="36" y="112" width="337" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--44" value="&lt;div&gt;5. Добавьте на схему межсервисные взаимодействия&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="YrV5XigEh4xy7u1ZsSS--46" vertex="1">
+          <mxGeometry x="36" y="134" width="337" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--45" value="" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF4A2E;" parent="YrV5XigEh4xy7u1ZsSS--46" vertex="1">
+          <mxGeometry width="620" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--1" value="1. Детально ознакомьтесь с кодом проекта" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="12" y="-21" width="250" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--4" value="2. Разделите проект на микрофронтенды и выберите паттерн декомпозиции" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="12" y="134" width="456" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--5" value="Структура проекта:" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="39" y="32" width="130" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--6" value="Компоненты и модули:" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="43" width="134" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--7" value="Зависимости проекта:" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="72" width="130" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--8" value="Маршрутизация:" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="31" y="60" width="130" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--9" value="Утилиты и вспомогательные функции:" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="81" width="265" height="26.5" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--10" value="Стили и их организация:" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="94" width="183" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--14" value="Чтобы в будущем проект могли развивать несколько независимых команд, декомпозируйте фронтенд проекта." style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="153" width="449" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--15" value="Ознакомьтесь с документацией и особенностями подходов Single SPA и Webpack Module Federation. Выберите тот подход, который, на ваш взгляд, более уместен. Используйте его для интеграции микрофронтендов с основным приложением." style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="191" width="522" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--16" value="Создайте новые структуры проекта для каждого микрофронтенда." style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="218" width="522" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--18" value="Настройте маршрутизацию и убедитесь, что все компоненты работают корректно." style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="242" width="522" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--19" value="&lt;div&gt;Создайте и заполните Readme.md с описанием проекта. Опишите там компоненты, модули и запуск. А ещё обоснуйте своё решение — напишите, почему использовали именно этот подход и разделили фронтенд на такие микрофронтенды.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="47" y="277" width="522" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--20" value="Задание 1" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-17" y="-55" width="104" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YrV5XigEh4xy7u1ZsSS--22" value="" style="whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=#FF0800;fillColor=none;strokeColor=#FF3C26;" parent="1" vertex="1">
+          <mxGeometry x="-24" y="-61" width="619" height="380" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
