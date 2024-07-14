@@ -2,6 +2,12 @@
   "name": "web_canonicals_ru",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "auth",
+    "profile",
+    "card",
+    "."
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -9,15 +15,15 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts test",
-    "test:microfrontend": "npx jest ./index.spec.js",
-    "eject": "react-scripts eject"
+    "start": "npm run start:webpack -w auth & npm run start:webpack -w profile & npm run start:webpack -w card & npm run start:webpack -w web_canonicals_ru",
+    "start:webpack": "webpack serve",
+    "build": "npm run build:webpack --ws",
+    "build:webpack": "webpack --mode production",
+    "test": "npx jest ./index.spec.js",
+    "test:microfrontend": "npx jest ./index.spec.js"
   },
   "eslintConfig": {
     "extends": [
@@ -38,9 +44,23 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
     "@playwright/test": "^1.45.0",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.14.9",
+    "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
     "dotenv": "^16.0.2",
-    "wait-port": "^1.1.0"
+    "external-remotes-plugin": "^1.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "wait-port": "^1.1.0",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
