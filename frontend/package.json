@@ -1,5 +1,5 @@
 {
-  "name": "web_canonicals_ru",
+  "name": "host",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,8 +13,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "webpack serve --open --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+
+    "start2": "react-scripts --openssl-legacy-provider start",
+    "build2": "react-scripts --openssl-legacy-provider build",
+
     "test": "react-scripts test",
     "test:microfrontend": "npx jest ./index.spec.js",
     "eject": "react-scripts eject"
@@ -41,6 +45,11 @@
     "@playwright/test": "^1.45.0",
     "@types/node": "^20.14.9",
     "dotenv": "^16.0.2",
-    "wait-port": "^1.1.0"
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "wait-port": "^1.1.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }

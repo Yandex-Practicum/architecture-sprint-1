@@ -1,0 +1,89 @@
+
+@startuml C4_Elements
+
+!include <c4/C4_Container.puml>
+!include <c4/C4_Component.puml>
+!include <tupadr3/devicons/react>
+
+'skinparam linetype polyline
+'skinparam linetype ortho
+skinparam ParticipantPadding 130
+
+title \n= Диаграмма компонентов\n\n
+
+System_Boundary(c1, "Mesto") {
+Container_Boundary(host, "Host") {
+    Component(app, App, React JS, React JS, $sprite="react,scale=1")
+    Component(main, Main, React JS, React JS, $sprite="react,scale=1")
+    Component(router, Router, React JS, React JS, $sprite="react,scale=1")
+}
+
+Container_Boundary(auth, "Auth") {
+    Component(login, Login, React JS, React JS, $sprite="react,scale=1")
+    Component(register, Register, React JS, React JS, $sprite="react,scale=1")
+}
+
+Container_Boundary(profile, "Profile") {
+    Component(profileComponent, Profile, React JS, React JS, $sprite="react,scale=1")
+    Component(editAvatarPopup, Edit Avatar Popup, React JS, React JS, $sprite="react,scale=1")
+    Component(editProfilePopup, Edit Profile Popup, React JS, React JS, $sprite="react,scale=1")
+}
+
+Container_Boundary(card, "Card") {
+    Component(addPlacePopup, Add Place Popup, React JS, React JS, $sprite="react,scale=1")
+    Component(cardComponent, Card, React JS, React JS, $sprite="react,scale=1")
+    Component(cardList, Card List, React JS, React JS, $sprite="react,scale=1")
+}
+
+Container_Boundary(marginals, "Marginals") {
+    Component(header, Header, React JS, React JS, $sprite="react,scale=1")
+    Component(footer, Footer, React JS, React JS, $sprite="react,scale=1")
+}
+
+Container_Boundary(commons, "Commons") {
+    Component(infoTooltip, Info Tooltip, React JS, React JS, $sprite="react,scale=1")
+    Component(popupWithForm, Popup With Form, React JS, React JS, $sprite="react,scale=1")
+    Component(imagePopup, Image Popup, React JS, React JS, $sprite="react,scale=1")
+}
+
+
+}
+
+Rel_Neighbor(app, router, "uses")
+Rel_Neighbor(main, router, "uses")
+
+Rel_Back(app, infoTooltip, "http")
+Rel_Back(app, popupWithForm, "http")
+Rel_Back(app, imagePopup, "http")
+
+Rel_Back(router, login, "http")
+Rel_Back(router, register, "http")
+
+Rel_Back(app, editProfilePopup, "http")
+Rel_Back(app, editAvatarPopup, "http")
+
+Rel_Back(app, addPlacePopup, "http")
+
+Rel_Back(app, header, "http")
+Rel_Back(app, footer, "http")
+
+Rel_Back(main, profileComponent, "http")
+Rel_Back(main, cardList, "http")
+
+Rel_Back(editProfilePopup, popupWithForm, "http")
+Rel_Back(editAvatarPopup, popupWithForm, "http")
+
+Rel_Back(addPlacePopup, popupWithForm, "http")
+
+Lay_U(host, commons)
+Lay_U(host, card)
+
+Lay_Distance(host, commons, 1)
+Lay_Distance(host, auth, 1)
+Lay_Distance(host, marginals, 1)
+Lay_Distance(host, card, 3)
+
+SHOW_FLOATING_LEGEND()
+
+footer drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()
+@enduml

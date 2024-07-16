@@ -1,20 +1,25 @@
 import React from "react";
 import { Route, useHistory, Switch } from "react-router-dom";
-import Header from "./Header";
 import Main from "./Main";
-import Footer from "./Footer";
-import PopupWithForm from "./PopupWithForm";
-import ImagePopup from "./ImagePopup";
 import api from "../utils/api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import EditProfilePopup from "./EditProfilePopup";
-import EditAvatarPopup from "./EditAvatarPopup";
-import AddPlacePopup from "./AddPlacePopup";
-import Register from "./Register";
-import Login from "./Login";
-import InfoTooltip from "./InfoTooltip";
 import ProtectedRoute from "./ProtectedRoute";
 import * as auth from "../utils/auth.js";
+
+const InfoTooltip = React.lazy(() => import("commons/InfoTooltip"));
+const PopupWithForm = React.lazy(() => import("commons/PopupWithForm"));
+const ImagePopup = React.lazy(() => import("commons/ImagePopup"));
+
+const Login = React.lazy(() => import("auth/Login"));
+const Register = React.lazy(() => import("auth/Register"));
+
+const EditProfilePopup = React.lazy(() => import("profile/EditProfilePopup"));
+const EditAvatarPopup = React.lazy(() => import("profile/EditAvatarPopup"));
+
+const AddPlacePopup = React.lazy(() => import("card/AddPlacePopup"));
+
+const Header = React.lazy(() => import("marginals/Header"));
+const Footer = React.lazy(() => import("marginals/Footer"));
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
@@ -181,53 +186,56 @@ function App() {
     // В компонент App внедрён контекст через CurrentUserContext.Provider
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page__content">
-        <Header email={email} onSignOut={onSignOut} />
-        <Switch>
-          {/*Роут / защищён HOC-компонентом ProtectedRoute*/}
-          <ProtectedRoute
-            exact
-            path="/"
-            component={Main}
-            cards={cards}
-            onEditProfile={handleEditProfileClick}
-            onAddPlace={handleAddPlaceClick}
-            onEditAvatar={handleEditAvatarClick}
-            onCardClick={handleCardClick}
-            onCardLike={handleCardLike}
-            onCardDelete={handleCardDelete}
-            loggedIn={isLoggedIn}
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <Header email={email} onSignOut={onSignOut} />
+          <Switch>
+            {/*Роут / защищён HOC-компонентом ProtectedRoute*/}
+            <ProtectedRoute
+              exact
+              path="/"
+              component={Main}
+              cards={cards}
+              onEditProfile={handleEditProfileClick}
+              onAddPlace={handleAddPlaceClick}
+              onEditAvatar={handleEditAvatarClick}
+              onCardClick={handleCardClick}
+              onCardLike={handleCardLike}
+              onCardDelete={handleCardDelete}
+              loggedIn={isLoggedIn}
+            />
+            {/*Роут /signup и /signin не является защищёнными, т.е оборачивать их в HOC ProtectedRoute не нужно.*/}
+            <Route path="/signup">
+              <Register onRegister={onRegister} />
+            </Route>
+            <Route path="/signin">
+              <Login onLogin={onLogin} />
+            </Route>
+          </Switch>
+          <Footer />
+          <EditProfilePopup
+              currentUser={currentUser}
+              isOpen={isEditProfilePopupOpen}
+              onUpdateUser={handleUpdateUser}
+              onClose={closeAllPopups}
           />
-          {/*Роут /signup и /signin не является защищёнными, т.е оборачивать их в HOC ProtectedRoute не нужно.*/}
-          <Route path="/signup">
-            <Register onRegister={onRegister} />
-          </Route>
-          <Route path="/signin">
-            <Login onLogin={onLogin} />
-          </Route>
-        </Switch>
-        <Footer />
-        <EditProfilePopup
-          isOpen={isEditProfilePopupOpen}
-          onUpdateUser={handleUpdateUser}
-          onClose={closeAllPopups}
-        />
-        <AddPlacePopup
-          isOpen={isAddPlacePopupOpen}
-          onAddPlace={handleAddPlaceSubmit}
-          onClose={closeAllPopups}
-        />
-        <PopupWithForm title="Вы уверены?" name="remove-card" buttonText="Да" />
-        <EditAvatarPopup
-          isOpen={isEditAvatarPopupOpen}
-          onUpdateAvatar={handleUpdateAvatar}
-          onClose={closeAllPopups}
-        />
-        <ImagePopup card={selectedCard} onClose={closeAllPopups} />
-        <InfoTooltip
-          isOpen={isInfoToolTipOpen}
-          onClose={closeAllPopups}
-          status={tooltipStatus}
-        />
+          <AddPlacePopup
+            isOpen={isAddPlacePopupOpen}
+            onAddPlace={handleAddPlaceSubmit}
+            onClose={closeAllPopups}
+          />
+          <PopupWithForm title="Вы уверены?" name="remove-card" buttonText="Да" />
+          <EditAvatarPopup
+            isOpen={isEditAvatarPopupOpen}
+            onUpdateAvatar={handleUpdateAvatar}
+            onClose={closeAllPopups}
+          />
+          <ImagePopup card={selectedCard} onClose={closeAllPopups} />
+          <InfoTooltip
+            isOpen={isInfoToolTipOpen}
+            onClose={closeAllPopups}
+            status={tooltipStatus}
+          />
+        </React.Suspense>
       </div>
     </CurrentUserContext.Provider>
   );

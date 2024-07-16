@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+
+  mesto-host:
+    container_name: mesto-host
+    build:
+      context: ./
+      dockerfile: microfrontend/Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3100:3100"
+    depends_on:
+      - mesto-auth
+      - mesto-profile
+      - mesto-card
+      - mesto-commons
+      - mesto-marginals
+    networks:
+      - mesto-network
+
+  mesto-auth:
+    container_name: mesto-auth
+    build:
+      context: ./microfrontend/auth
+      dockerfile: ../Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3002:3002"
+    networks:
+      - mesto-network
+
+  mesto-profile:
+    container_name: mesto-profile
+    build:
+      context: ./microfrontend/profile
+      dockerfile: ../Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3003:3003"
+    networks:
+      - mesto-network
+
+  mesto-card:
+    container_name: mesto-card
+    build:
+      context: ./microfrontend/card
+      dockerfile: ../Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3004:3004"
+    networks:
+      - mesto-network
+
+  mesto-marginals:
+    container_name: mesto-marginals
+    build:
+      context: ./microfrontend/marginals
+      dockerfile: ../Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3006:3006"
+    networks:
+      - mesto-network
+
+  mesto-commons:
+    container_name: mesto-commons
+    build:
+      context: ./microfrontend/commons
+      dockerfile: ../Dockerfile
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3005:3005"
+    networks:
+      - mesto-network
+
+networks:
+  mesto-network:
+    driver: bridge
