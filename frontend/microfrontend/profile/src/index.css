@@ -1,0 +1,6 @@
+@import url('./styles/normalize.css');
+@import url('./styles/fonts.css');
+@import url('./styles/page/page.css');
+@import url('./styles/profile/profile.css');
+@import url('./styles/popup/popup.css');
+@import url('./styles/popup/_is-opened/popup_is-opened.css');

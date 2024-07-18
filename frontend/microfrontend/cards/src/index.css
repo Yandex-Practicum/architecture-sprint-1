@@ -1,0 +1,7 @@
+@import url('./styles/normalize.css');
+@import url('./styles/fonts.css');
+@import url('./styles/places/places.css');
+@import url('./styles/card/card.css');
+@import url('./styles/popup/popup.css');
+@import url('./styles/popup/_is-opened/popup_is-opened.css');
+
