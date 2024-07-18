@@ -1,0 +1,30 @@
+.page {
+    background: #000;
+}
+
+.page__section {
+    width: 100%;
+    max-width: 882px;
+    /*Опционально. Тут можно принять проект и без ограничения максимальной ширины.*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1140px) {
+    .page__section {
+        width: calc(100% - 40px);
+    }
+}
+
+.page__content {
+    background-color: black;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    /*Уже пора бы в можно лучше про стики-футер рассказать*/
+}
