@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js',
     mode: 'development',
     devServer: {
-        contentBase: './dist',
+        // contentBase: './dist',
         port: 3001
     },
     output: {
