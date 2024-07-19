@@ -51,7 +51,7 @@
 
 **Система управления торговыми площадками**
 
-https://app.diagrams.net/#G1ecXVuVDoIbMR4ys_P8Cste4IcjW3uggW#%7B%22pageId%22%3A%22r-eWlja2e1B2q3se7BC3%22%7D
+https://drive.google.com/file/d/1ecXVuVDoIbMR4ys_P8Cste4IcjW3uggW/view?usp=sharing
 
 В предоставленной схеме и задаче не было контекста, а так же отсутствует описание процесса, по этому некоторые вещи
 добавил от себя.
