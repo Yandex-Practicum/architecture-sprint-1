@@ -1,28 +1,15 @@
 services:
-
   mongo:
     image: mongo
     restart: always
     logging:
       driver: none
     healthcheck:
-      test:  echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
       interval: 10s
       timeout: 10s
       retries: 5
       start_period: 10s
-
-  backend-test:
-    build:
-      context: backend
-      dockerfile: ../Dockerfile.backend
-    environment:
-      DB_ADDRESS: mongodb://mongo:27017/mestodb
-    command: npm run lint
-    restart: 'no'
-    depends_on:
-      mongo:
-        condition: service_healthy
 
   backend:
     build:
@@ -34,29 +21,50 @@ services:
       mongo:
         condition: service_healthy
     ports:
-      - 3001:3000
-    healthcheck:
-      interval: 10s
-      timeout: 2s 
-      start_period: 15s 
-      retries: 5 
-      test: node healthcheck.js
+      - 3005:3000
 
-  frontend-test:
+  frontend-post:
     build:
-      context: frontend
-      dockerfile: ../Dockerfile.frontend
-    command: yarn test:microfrontend
-    restart: 'no'
-    environment:
-          CI: true
+      context: ./frontend/post
+      dockerfile: ./Dockerfile
+    ports:
+      - 3003:3003
+    depends_on:
+      backend:
+        condition: service_started
 
-  frontend:
+  frontend-profile:
     build:
-      context: frontend
-      dockerfile: ../Dockerfile.frontend
+      context: ./frontend/profile
+      dockerfile: ./Dockerfile
+    ports:
+      - 3002:3002
+    depends_on:
+      backend:
+        condition: service_started
+
+  frontend-auth:
+    build:
+      context: ./frontend/auth
+      dockerfile: ./Dockerfile
+    ports:
+      - 3001:3001
+    depends_on:
+      backend:
+        condition: service_started
+
+  frontend-mesto:
+    build:
+      context: ./frontend/mesto
+      dockerfile: ./Dockerfile
     ports:
       - 3000:3000
     depends_on:
       backend:
-        condition: service_healthy
+        condition: service_started
+      frontend-auth:
+        condition: service_started
+      frontend-post:
+        condition: service_started
+      frontend-profile:
+        condition: service_started
