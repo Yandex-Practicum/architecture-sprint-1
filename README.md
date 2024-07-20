@@ -1,5 +1,21 @@
 # Проектная работа 1.
 
+## Release Notes
+
+### v1.0.1
+
+**Новые возможности:**
+- [+] краткое описание сервисов на схему `praktikum_arch_template.drawio`.
+- [+] микрофронтенд `popups`.
+
+**Улучшения:**
+- [~] компоненты `EditProfilePopup`, `EditAvatarPopup`, `AddPlacePopup`, `ImagePopup`, `PopupWithForm`, `InfoTooltip` перенесены в mf `popups`.
+- [~] обновлены диаграммы `c4_context`, `c4_container`.
+- [-] микрофронтенд `commons`.
+
+**Исправленные ошибки:**
+- Отсутствуют.
+
 ## Архитектура микрофронтендов Mesto
 
 ### Запуск

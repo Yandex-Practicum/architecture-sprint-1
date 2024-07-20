@@ -55,7 +55,7 @@ module.exports = {
                 auth: 'auth@http://localhost:3002/remoteEntry.js',
                 profile: 'profile@http://localhost:3003/remoteEntry.js',
                 card: 'card@http://localhost:3004/remoteEntry.js',
-                commons: 'commons@http://localhost:3005/remoteEntry.js',
+                popups: 'popups@http://localhost:3005/remoteEntry.js',
                 marginals: 'marginals@http://localhost:3006/remoteEntry.js'
             },
             shared: {

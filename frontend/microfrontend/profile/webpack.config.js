@@ -51,12 +51,7 @@ module.exports = {
             name: 'profile',
             filename: 'remoteEntry.js',
             exposes: {
-                './Profile': './src/components/Profile',
-                './EditAvatarPopup': './src/components/EditAvatarPopup',
-                './EditProfilePopup': './src/components/EditProfilePopup'
-            },
-            remotes: {
-                commons: 'commons@http://host.docker.internal:3005/remoteEntry.js'
+                './Profile': './src/components/Profile'
             },
             shared: {
                 react: {

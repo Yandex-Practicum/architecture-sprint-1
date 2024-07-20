@@ -6,17 +6,15 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import ProtectedRoute from "./ProtectedRoute";
 import * as auth from "../utils/auth.js";
 
-const InfoTooltip = React.lazy(() => import("commons/InfoTooltip"));
-const PopupWithForm = React.lazy(() => import("commons/PopupWithForm"));
-const ImagePopup = React.lazy(() => import("commons/ImagePopup"));
+const InfoTooltip = React.lazy(() => import("popups/InfoTooltip"));
+const PopupWithForm = React.lazy(() => import("popups/PopupWithForm"));
+const ImagePopup = React.lazy(() => import("popups/ImagePopup"));
+const EditProfilePopup = React.lazy(() => import("popups/EditProfilePopup"));
+const EditAvatarPopup = React.lazy(() => import("popups/EditAvatarPopup"));
+const AddPlacePopup = React.lazy(() => import("popups/AddPlacePopup"));
 
 const Login = React.lazy(() => import("auth/Login"));
 const Register = React.lazy(() => import("auth/Register"));
-
-const EditProfilePopup = React.lazy(() => import("profile/EditProfilePopup"));
-const EditAvatarPopup = React.lazy(() => import("profile/EditAvatarPopup"));
-
-const AddPlacePopup = React.lazy(() => import("card/AddPlacePopup"));
 
 const Header = React.lazy(() => import("marginals/Header"));
 const Footer = React.lazy(() => import("marginals/Footer"));

@@ -1,7 +1,6 @@
 import React from 'react';
 import '../blocks/_popup/popup.css'
-
-const PopupWithForm = React.lazy(() => import("commons/PopupWithForm"));
+import PopupWithForm from "./PopupWithForm";
 
 function AddPlacePopup({ isOpen, onAddPlace, onClose }) {
   const [name, setName] = React.useState('');

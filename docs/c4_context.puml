@@ -22,7 +22,7 @@ AddElementTag("users", $bgColor="transparent", $fontColor="#335DA5", $borderThic
 AddElementTag("mf-host", $sprite="react", $shadowing="true", $bgColor="#335DA5", $shape=EightSidedShape(), $legendText="host")
 AddElementTag("mf-remote", $sprite="react", $shadowing="true", $legendText="remote")
 
-Person(user, "Пользователь", $sprite="users", $tags="users")
+Person(user, "User", $sprite="users", $tags="users")
 
 'SetPropertyHeader("lib","version")
 WithoutPropertyHeader()
@@ -37,7 +37,7 @@ Container(auth, "Auth", "React JS", "Auth App", $tags="mf-remote")
 Container(profile, "Profile", "React JS", "Profile App", $tags="mf-remote")
 Container(card, "Card", "React JS", "Card App", $tags="mf-remote")
 Container(marginals, "Marginals", "React JS", "Marginals App", $tags="mf-remote")
-Container(commons, "Commons", "React JS", "Commons App", $tags="mf-remote")
+Container(popups, "Popups", "React JS", "Popups App", $tags="mf-remote")
 
 }
 
@@ -47,10 +47,7 @@ Rel_Back(host, auth, "consumes :3002", "http")
 Rel_Back(host, profile, "consumes :3003", "http")
 Rel_Back(host, card, "consumes :3004", "http")
 Rel_Back(host, marginals, "consumes :3006", "http")
-Rel_Back(host, commons, "consumes :3005", "http")
-
-Rel_Back(profile, commons, "consumes :3005", "http")
-Rel_Back(card, commons, "consumes :3005", "http")
+Rel_Back(host, popups, "consumes :3005", "http")
 
 SHOW_FLOATING_LEGEND()
 

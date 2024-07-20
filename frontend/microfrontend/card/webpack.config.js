@@ -52,11 +52,7 @@ module.exports = {
             filename: 'remoteEntry.js',
             exposes: {
                 './Card': './src/components/Card',
-                './CardList': './src/components/CardList',
-                './AddPlacePopup': './src/components/AddPlacePopup',
-            },
-            remotes: {
-                commons: 'commons@http://host.docker.internal:3005/remoteEntry.js'
+                './CardList': './src/components/CardList'
             },
             shared: {
                 react: {

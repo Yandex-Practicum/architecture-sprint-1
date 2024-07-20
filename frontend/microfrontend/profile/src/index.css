@@ -1,4 +1,3 @@
 @import url('./vendor/normalize.css');
 @import url('./vendor/fonts.css');
-@import url('blocks/_popup/popup.css');
-@import url('blocks/_popup/_is-opened/popup_is-opened.css');
+@import url('./blocks/profile/profile.css');

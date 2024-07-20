@@ -48,9 +48,12 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'commons',
+            name: 'popups',
             filename: 'remoteEntry.js',
             exposes: {
+                './AddPlacePopup': './src/components/AddPlacePopup',
+                './EditAvatarPopup': './src/components/EditAvatarPopup',
+                './EditProfilePopup': './src/components/EditProfilePopup',
                 './ImagePopup': './src/components/ImagePopup',
                 './PopupWithForm': './src/components/PopupWithForm',
                 './InfoTooltip': './src/components/InfoTooltip',

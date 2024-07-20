@@ -1,8 +1,7 @@
 import React from 'react';
 import '../blocks/_popup/popup.css'
 import '../blocks/_popup/_is-opened/popup_is-opened.css'
-
-const PopupWithForm = React.lazy(() => import("commons/PopupWithForm"));
+import PopupWithForm from "./PopupWithForm";
 
 function EditProfilePopup({ isOpen, currentUser, onUpdateUser, onClose }) {
   const [name, setName] = React.useState('');

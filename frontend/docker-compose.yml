@@ -15,7 +15,7 @@ services:
       - mesto-auth
       - mesto-profile
       - mesto-card
-      - mesto-commons
+      - mesto-popups
       - mesto-marginals
     networks:
       - mesto-network
@@ -68,10 +68,10 @@ services:
     networks:
       - mesto-network
 
-  mesto-commons:
-    container_name: mesto-commons
+  mesto-popups:
+    container_name: mesto-popups
     build:
-      context: ./microfrontend/commons
+      context: ./microfrontend/popups
       dockerfile: ../Dockerfile
     environment:
       - NODE_ENV=development

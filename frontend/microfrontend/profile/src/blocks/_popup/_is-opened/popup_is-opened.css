@@ -1,7 +1,0 @@
-.popup_is-opened {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: all;
-  /* When opening, make the visibility change immediate with no delay */
-  transition: visibility 0s, opacity 0.6s;
-}

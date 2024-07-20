@@ -25,12 +25,9 @@ Container_Boundary(auth, "Auth") {
 
 Container_Boundary(profile, "Profile") {
     Component(profileComponent, Profile, React JS, React JS, $sprite="react,scale=1")
-    Component(editAvatarPopup, Edit Avatar Popup, React JS, React JS, $sprite="react,scale=1")
-    Component(editProfilePopup, Edit Profile Popup, React JS, React JS, $sprite="react,scale=1")
 }
 
 Container_Boundary(card, "Card") {
-    Component(addPlacePopup, Add Place Popup, React JS, React JS, $sprite="react,scale=1")
     Component(cardComponent, Card, React JS, React JS, $sprite="react,scale=1")
     Component(cardList, Card List, React JS, React JS, $sprite="react,scale=1")
 }
@@ -40,10 +37,13 @@ Container_Boundary(marginals, "Marginals") {
     Component(footer, Footer, React JS, React JS, $sprite="react,scale=1")
 }
 
-Container_Boundary(commons, "Commons") {
+Container_Boundary(popups, "Popups") {
     Component(infoTooltip, Info Tooltip, React JS, React JS, $sprite="react,scale=1")
     Component(popupWithForm, Popup With Form, React JS, React JS, $sprite="react,scale=1")
     Component(imagePopup, Image Popup, React JS, React JS, $sprite="react,scale=1")
+    Component(addPlacePopup, Add Place Popup, React JS, React JS, $sprite="react,scale=1")
+    Component(editAvatarPopup, Edit Avatar Popup, React JS, React JS, $sprite="react,scale=1")
+    Component(editProfilePopup, Edit Profile Popup, React JS, React JS, $sprite="react,scale=1")
 }
 
 
