@@ -1,0 +1,8 @@
+.card__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 25px 20px;
+  /*Чтобы по ПЭПЭ отступы снизу-сверху одинаковые            */
+}

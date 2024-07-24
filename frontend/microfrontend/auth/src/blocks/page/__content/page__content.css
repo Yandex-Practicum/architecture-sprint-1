@@ -1,0 +1,9 @@
+.page__content {
+  background-color: black;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  /*Уже пора бы в можно лучше про стики-футер рассказать*/
+}

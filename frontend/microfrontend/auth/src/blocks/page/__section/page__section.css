@@ -1,0 +1,16 @@
+.page__section {
+  width: 100%;
+  max-width: 882px;
+  /*Опционально. Тут можно принять проект и без ограничения максимальной ширины.*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1140px) {
+  .page__section {
+    width: calc(100% - 40px);
+  }
+}

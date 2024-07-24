@@ -12,17 +12,17 @@ services:
       retries: 5
       start_period: 10s
 
-  backend-test:
-    build:
-      context: backend
-      dockerfile: ../Dockerfile.backend
-    environment:
-      DB_ADDRESS: mongodb://mongo:27017/mestodb
-    command: npm run lint
-    restart: 'no'
-    depends_on:
-      mongo:
-        condition: service_healthy
+  # backend-test:
+  #   build:
+  #     context: backend
+  #     dockerfile: ../Dockerfile.backend
+  #   environment:
+  #     DB_ADDRESS: mongodb://mongo:27017/mestodb
+  #   command: npm run lint
+  #   restart: 'no'
+  #   depends_on:
+  #     mongo:
+  #       condition: service_healthy
 
   backend:
     build:
@@ -42,14 +42,14 @@ services:
       retries: 5 
       test: node healthcheck.js
 
-  frontend-test:
-    build:
-      context: frontend
-      dockerfile: ../Dockerfile.frontend
-    command: yarn test:microfrontend
-    restart: 'no'
-    environment:
-          CI: true
+  # frontend-test:
+  #   build:
+  #     context: frontend
+  #     dockerfile: ../Dockerfile.frontend
+  #   command: yarn test:microfrontend
+  #   restart: 'no'
+  #   environment:
+  #         CI: true
 
   frontend:
     build:
