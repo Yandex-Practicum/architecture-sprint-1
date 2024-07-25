@@ -12,9 +12,7 @@
 
 # Задание 2
 
-https://drive.google.com/file/d/1UQX2SiHWL8P5JDv-O8f7VJZpUuWKzDs5/view?usp=sharing
-
-Практикум Sprint1.drawio.xml
+[Практикум Sprint1.drawio.xml](Практикум Sprint1.drawio.xml)
 
 Сервис пользователей - предоставляет различную информацию о пользователе и его предпочтениях.
 Api Gateway - выполняет валидацию токена пользователя и маршрутизацию запросов к сервисам. В случае если выполняется
