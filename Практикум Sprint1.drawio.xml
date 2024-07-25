@@ -882,7 +882,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Copy of DF" id="3vtPoxgYrLjwfnTL_wVX">
-    <mxGraphModel dx="3748" dy="3038" grid="0" gridSize="10" guides="0" tooltips="0" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2563" dy="2399" grid="0" gridSize="10" guides="0" tooltips="0" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="PQNH3Jn8QkZWbHMBs2La-0" />
         <mxCell id="PQNH3Jn8QkZWbHMBs2La-1" parent="PQNH3Jn8QkZWbHMBs2La-0" />
@@ -1199,7 +1199,7 @@
         <mxCell id="GExC9HBmYAKVFhYwxPGt-13" value="" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.gear;rounded=1;strokeColor=none;fillColor=default;" parent="GExC9HBmYAKVFhYwxPGt-11" vertex="1">
           <mxGeometry x="280" y="11" width="17" height="17" as="geometry" />
         </mxCell>
-        <mxCell id="GExC9HBmYAKVFhYwxPGt-14" value="Предпочтения пользователя" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontColor=#FFFFFF;strokeColor=none;" parent="GExC9HBmYAKVFhYwxPGt-11" vertex="1">
+        <mxCell id="GExC9HBmYAKVFhYwxPGt-14" value="Предоставление информации о предпочтениях пользователя" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;fontColor=#FFFFFF;strokeColor=none;" parent="GExC9HBmYAKVFhYwxPGt-11" vertex="1">
           <mxGeometry x="3" y="4.5" width="265" height="30" as="geometry" />
         </mxCell>
         <mxCell id="1JBqT9eKOCqV0wEF16TI-171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="PQNH3Jn8QkZWbHMBs2La-1" source="GExC9HBmYAKVFhYwxPGt-62" target="ZYtFo6Zij7aQg3aiNii7-5" edge="1">
@@ -2166,6 +2166,12 @@
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-22" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;i&gt;PostgreSQL&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;fontSize=23;fontStyle=1" parent="0eyTcIWteQ85gTC8c7gZ-19" vertex="1">
           <mxGeometry x="53" width="89" height="49" as="geometry" />
         </mxCell>
+        <mxCell id="e8OStoUZcsco36E1PzUO-16" value="&lt;p style=&quot;margin: 0px 0px 0px 13px; text-indent: -13px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 14px; line-height: normal; color: rgb(14, 14, 14); text-align: start;&quot; class=&quot;p1&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Заявка на аппеляцию&lt;/font&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#FF0000;strokeWidth=3;" vertex="1" parent="0eyTcIWteQ85gTC8c7gZ-19">
+          <mxGeometry x="17" y="67" width="157" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="e8OStoUZcsco36E1PzUO-17" value="&lt;p style=&quot;margin: 0px 0px 0px 13px; text-indent: -13px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 14px; line-height: normal; color: rgb(14, 14, 14); text-align: start;&quot; class=&quot;p1&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Заявка на аукцион&lt;/font&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#FF0000;strokeWidth=3;" vertex="1" parent="0eyTcIWteQ85gTC8c7gZ-19">
+          <mxGeometry x="18" y="98" width="157" height="31" as="geometry" />
+        </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="PQNH3Jn8QkZWbHMBs2La-1" source="0eyTcIWteQ85gTC8c7gZ-20" target="1JBqT9eKOCqV0wEF16TI-95" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -2183,6 +2189,9 @@
         </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-33" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;i&gt;PostgreSQL&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;fontSize=23;fontStyle=1" parent="0eyTcIWteQ85gTC8c7gZ-30" vertex="1">
           <mxGeometry x="53" width="89" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="e8OStoUZcsco36E1PzUO-18" value="&lt;p style=&quot;margin: 0px 0px 0px 13px; text-indent: -13px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 14px; line-height: normal; color: rgb(14, 14, 14); text-align: start;&quot; class=&quot;p1&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Информация о заказе&lt;/font&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#FF0000;strokeWidth=3;" vertex="1" parent="0eyTcIWteQ85gTC8c7gZ-30">
+          <mxGeometry x="21" y="64" width="157" height="21" as="geometry" />
         </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.002;entryY=0.465;entryDx=0;entryDy=0;entryPerimeter=0;" parent="PQNH3Jn8QkZWbHMBs2La-1" source="0eyTcIWteQ85gTC8c7gZ-31" target="1JBqT9eKOCqV0wEF16TI-131" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -2202,11 +2211,14 @@
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-39" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;i&gt;PostgreSQL&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;fontSize=23;fontStyle=1" parent="0eyTcIWteQ85gTC8c7gZ-36" vertex="1">
           <mxGeometry x="53" width="89" height="49" as="geometry" />
         </mxCell>
+        <mxCell id="e8OStoUZcsco36E1PzUO-19" value="&lt;font face=&quot;Times New Roman&quot;&gt;Нотификация&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#FF0000;strokeWidth=3;" vertex="1" parent="0eyTcIWteQ85gTC8c7gZ-36">
+          <mxGeometry x="17" y="66" width="157" height="31" as="geometry" />
+        </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.138;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;" parent="PQNH3Jn8QkZWbHMBs2La-1" source="0eyTcIWteQ85gTC8c7gZ-37" target="ZYtFo6Zij7aQg3aiNii7-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-42" value="" style="group" parent="PQNH3Jn8QkZWbHMBs2La-1" vertex="1" connectable="0">
-          <mxGeometry x="1069" y="-14" width="196" height="144" as="geometry" />
+          <mxGeometry x="1069" y="-14" width="200" height="144" as="geometry" />
         </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-43" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;rounded=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="0eyTcIWteQ85gTC8c7gZ-42" vertex="1">
           <mxGeometry y="3" width="196" height="141" as="geometry" />
@@ -2216,6 +2228,9 @@
         </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-45" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;i&gt;PostgreSQL&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;fontSize=23;fontStyle=1" parent="0eyTcIWteQ85gTC8c7gZ-42" vertex="1">
           <mxGeometry x="53" width="89" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="e8OStoUZcsco36E1PzUO-23" value="&lt;p style=&quot;margin: 0px 0px 0px 13px; text-indent: -13px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 14px; line-height: normal; color: rgb(14, 14, 14); text-align: start;&quot; class=&quot;p1&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Информация о предпочтениях пользователя&lt;/font&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#FF0000;strokeWidth=3;" vertex="1" parent="0eyTcIWteQ85gTC8c7gZ-42">
+          <mxGeometry x="6" y="61" width="186" height="35" as="geometry" />
         </mxCell>
         <mxCell id="0eyTcIWteQ85gTC8c7gZ-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="PQNH3Jn8QkZWbHMBs2La-1" source="GExC9HBmYAKVFhYwxPGt-1" target="0eyTcIWteQ85gTC8c7gZ-43" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -2232,6 +2247,9 @@
         <mxCell id="e8OStoUZcsco36E1PzUO-7" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;i&gt;PostgreSQL&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;fontSize=23;fontStyle=1" vertex="1" parent="e8OStoUZcsco36E1PzUO-4">
           <mxGeometry x="53" width="89" height="49" as="geometry" />
         </mxCell>
+        <mxCell id="e8OStoUZcsco36E1PzUO-21" value="&lt;p style=&quot;margin: 0px 0px 0px 13px; text-indent: -13px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 14px; line-height: normal; color: rgb(14, 14, 14); text-align: start;&quot; class=&quot;p1&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Собранная статистика&amp;nbsp;&lt;/font&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#FF0000;strokeWidth=3;" vertex="1" parent="e8OStoUZcsco36E1PzUO-4">
+          <mxGeometry x="31" y="75" width="157" height="31" as="geometry" />
+        </mxCell>
         <mxCell id="e8OStoUZcsco36E1PzUO-8" value="" style="group" vertex="1" connectable="0" parent="PQNH3Jn8QkZWbHMBs2La-1">
           <mxGeometry x="2198" y="600" width="196" height="144" as="geometry" />
         </mxCell>
@@ -2243,6 +2261,9 @@
         </mxCell>
         <mxCell id="e8OStoUZcsco36E1PzUO-11" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;i&gt;PostgreSQL&lt;/i&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;shadow=0;fontSize=23;fontStyle=1" vertex="1" parent="e8OStoUZcsco36E1PzUO-8">
           <mxGeometry x="53" width="89" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="e8OStoUZcsco36E1PzUO-20" value="&lt;p style=&quot;margin: 0px 0px 0px 13px; text-indent: -13px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 14px; line-height: normal; color: rgb(14, 14, 14); text-align: start;&quot; class=&quot;p1&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Отчет&lt;/font&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#FF0000;strokeWidth=3;" vertex="1" parent="e8OStoUZcsco36E1PzUO-8">
+          <mxGeometry x="19" y="72" width="157" height="21" as="geometry" />
         </mxCell>
         <mxCell id="e8OStoUZcsco36E1PzUO-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.15;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="PQNH3Jn8QkZWbHMBs2La-1" source="e8OStoUZcsco36E1PzUO-9" target="ZYtFo6Zij7aQg3aiNii7-5">
           <mxGeometry relative="1" as="geometry" />
