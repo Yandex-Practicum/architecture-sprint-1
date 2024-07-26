@@ -1,10 +1,26 @@
 import React from 'react';
+import auth from "../utils/auth";
+import InfoTooltip from "./InfoTooltip";
 
 import '../blocks/login/login.css';
 
-function Login ({ onLogin }){
+function Login (){
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+
+  function onLogin({ email, password }) {
+    auth
+      .login(email, password)
+      .then((res) => {
+        setIsLoggedIn(true);
+        setEmail(email);
+        history.push("/");
+      })
+      .catch((err) => {
+        setTooltipStatus("fail");
+        setIsInfoToolTipOpen(true);
+      });
+  }
 
   function handleSubmit(e){
     e.preventDefault();

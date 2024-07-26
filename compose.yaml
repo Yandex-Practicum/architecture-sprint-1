@@ -25,6 +25,7 @@ services:
         condition: service_healthy
 
   backend:
+    image: architecture-sprint-1-backend
     build:
       context: backend
       dockerfile: ../Dockerfile.backend
@@ -52,11 +53,28 @@ services:
           CI: true
 
   frontend:
+    image: architecture-sprint-1-frontend:latest
+    ports:
+     - 3003:3000
+    depends_on:
+      backend:
+        condition: service_healthy
+      auth-microfrontend:
+        condition: service_healthy
+
+  auth-microfrontend:
     build:
       context: frontend
-      dockerfile: ../Dockerfile.frontend
+      dockerfile: ../Dockerfile.auth-microfrontend
     ports:
-      - 3000:3000
+     - 4000:3010
+    restart: always
+    healthcheck:
+      interval: 10s
+      timeout: 2s 
+      start_period: 15s 
+      retries: 5 
+      test: node healthcheck.js
     depends_on:
       backend:
         condition: service_healthy

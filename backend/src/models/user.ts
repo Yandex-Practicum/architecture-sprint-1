@@ -1,8 +1,8 @@
-import bcrypt from 'bcryptjs';
-import mongoose, { Document, HydratedDocument, Model } from 'mongoose';
+import mongoose, { Model, Document, HydratedDocument } from 'mongoose';
 import validator from 'validator';
-import UnauthorizedError from '../errors/unauthorized-error';
+import bcrypt from 'bcryptjs'; // импортируем bcrypt
 import { urlRegExp } from '../middlewares/validatons';
+import UnauthorizedError from '../errors/unauthorized-error';
 
 interface IUser extends Document {
   name: string;
@@ -38,23 +38,23 @@ const userSchema = new mongoose.Schema<IUser, IUserModel, IUserMethods>({
     type: String,
     default: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
     validate: {
-
+      // для проверки ссылок студентам необходимо написать регулярное выражение
       validator: (v: string) => urlRegExp.test(v),
       message: 'Поле "avatar" должно быть валидным url-адресом.',
     },
   },
-
+  // в схеме пользователя есть обязательные email и password
   email: {
     type: String,
     required: [true, 'Поле "email" должно быть заполнено'],
-    unique: true,
+    unique: true, // поле email уникально (есть опция unique: true);
     validate: {
-
+      // для проверки email студенты используют validator
       validator: (v: string) => validator.isEmail(v),
       message: 'Поле "email" должно быть валидным email-адресом',
     },
   },
-
+  // поле password не имеет ограничения на длину, т.к. пароль хранится в виде хэша
   password: {
     type: String,
     required: [true, 'Поле "password" должно быть заполнено'],
