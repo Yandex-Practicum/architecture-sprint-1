@@ -31,7 +31,7 @@ module.exports = {
             name: "AuthMicroFrontend",
             filename: "remoteEntry.js",
             exposes: {
-                "./Button": "./src/Button"
+                "./Button": "./src/components/Button"
             }
         })
     ]
