@@ -68,6 +68,7 @@ module.exports = (_, argv) => ({
       exposes: {
         "./Button": "./src/components/Button",
         "./Counter": "./src/components/Counter",
+        "./Login": "./src/components/Login",
       },
       shared: {
         ...deps,
