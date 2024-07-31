@@ -1,15 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Button from "./components/Button";
+import { BrowserRouter } from "react-router-dom";
+import Register from "./components/Register";
 import Counter from "./components/Counter";
-
+import Button from "./components/Button";
 
 const App = () => (
-    <div><Counter /></div>
+    <div>
+        <Register />
+        <Counter />
+        <Button buttonName={"click me!"}/>
+    </div>
 );
 const rootElement = document.getElementById("app")
 if (!rootElement) throw new Error("Failed to find the root element")
 
 const root = ReactDOM.createRoot(rootElement)
 
-root.render(<App />)
+root.render(
+    <BrowserRouter><App /></BrowserRouter>
+)
