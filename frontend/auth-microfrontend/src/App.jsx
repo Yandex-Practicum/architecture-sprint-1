@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Button from "./Button";
-import Counter from "./Counter";
+import Button from "./components/Button";
+import Counter from "./components/Counter";
 
 
 const App = () => (
