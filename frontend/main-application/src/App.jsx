@@ -7,6 +7,7 @@ const Button = React.lazy(() => import("auth_microfrontend/Button"))
 const Counter = React.lazy(() => import("auth_microfrontend/Counter"))
 const Login = React.lazy(() => import("auth_microfrontend/Login"))
 const Register = React.lazy(() => import("auth_microfrontend/Register"))
+const InfoTooltip = React.lazy(() => import("auth_microfrontend/InfoTooltip"))
 
 const App = () => (
   <div className="container">
@@ -14,6 +15,7 @@ const App = () => (
       <Login />
       <Button buttonName={"click me"} />
       <Register />
+      <InfoTooltip />
   </div>
 );
 const rootElement = document.getElementById("app")

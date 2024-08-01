@@ -83,6 +83,7 @@ module.exports = (_, argv) => ({
         "./Counter": "./src/components/Counter",
         "./Login": "./src/components/Login",
         "./Register": "./src/components/Register",
+        "./InfoTooltip": "./src/components/InfoTooltip",
       },
       shared: {
         ...deps,
