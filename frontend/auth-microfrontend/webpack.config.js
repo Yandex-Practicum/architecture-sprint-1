@@ -79,8 +79,6 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Button": "./src/components/Button",
-        "./Counter": "./src/components/Counter",
         "./Login": "./src/components/Login",
         "./Register": "./src/components/Register",
         "./InfoTooltip": "./src/components/InfoTooltip",
