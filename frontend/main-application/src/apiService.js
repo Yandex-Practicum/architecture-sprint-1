@@ -97,6 +97,37 @@ class ApiService {
   }
 }
 
+
+
+
+
+const API_ADDRESS = 'https://nomoreparties.co';
+const API_TOKEN = `80a75492-21c5-4330-a02f-308029e94b63`;
+const GROUP_ID = `cohort0`;
+
+
+class Api {
+  constructor() {
+    const commonConfig = {
+      address: API_ADDRESS,
+      token: API_TOKEN,
+      groupId: GROUP_ID,
+    };
+    this.cardService = new ApiCardService(commonConfig);
+    this.profileService = new ApiProfileService(commonConfig);
+  }
+
+  getAppInfo() {
+    return Promise.all([
+      this.cardService.getCardList(),
+      this.profileService.getUserInfo()
+    ]);
+  }
+}
+
+
+const api = new Api();
+
 const apiService = new ApiService({
   address: 'https://nomoreparties.co',
   groupId: `cohort0`,
@@ -104,3 +135,5 @@ const apiService = new ApiService({
 });
 
 export default apiService;
+
+export { api, ApiService };

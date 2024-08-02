@@ -5,6 +5,7 @@ import { BrowserRouter, useHistory } from "react-router-dom"
 
 import "./index.css";
 import apiService from "./apiService";
+import api from "../../src/utils/api";
 
 const Button = React.lazy(() => import("auth_microfrontend/Button"))
 const Counter = React.lazy(() => import("auth_microfrontend/Counter"))
@@ -72,6 +73,83 @@ const App = observer(() => {
     if (!store) {
         return <div>Loading...</div>;
     }
+
+    // methods:
+    function handleEditProfileClick() {
+        setIsEditProfilePopupOpen(true);
+    }
+
+    function handleAddPlaceClick() {
+        setIsAddPlacePopupOpen(true);
+    }
+
+    function handleEditAvatarClick() {
+        setIsEditAvatarPopupOpen(true);
+    }
+
+    function closeAllPopups() {
+        setIsEditProfilePopupOpen(false);
+        setIsAddPlacePopupOpen(false);
+        setIsEditAvatarPopupOpen(false);
+        setIsInfoToolTipOpen(false);
+        setSelectedCard(null);
+    }
+
+    function handleCardClick(card) {
+        setSelectedCard(card);
+    }
+
+    function handleUpdateUser(userUpdate) {
+        apiService
+            .setUserInfo(userUpdate)
+            .then((newUserData) => {
+                setCurrentUser(newUserData);
+                closeAllPopups();
+            })
+            .catch((err) => console.log(err));
+    }
+
+    function handleUpdateAvatar(avatarUpdate) {
+        apiService
+            .setUserAvatar(avatarUpdate)
+            .then((newUserData) => {
+                setCurrentUser(newUserData);
+                closeAllPopups();
+            })
+            .catch((err) => console.log(err));
+    }
+
+    function handleCardLike(card) {
+        const isLiked = card.likes.some((i) => i._id === currentUser._id);
+        apiService
+            .changeLikeCardStatus(card._id, !isLiked)
+            .then((newCard) => {
+                setCards((cards) =>
+                    cards.map((c) => (c._id === card._id ? newCard : c))
+                );
+            })
+            .catch((err) => console.log(err));
+    }
+
+    function handleCardDelete(card) {
+        apiService
+            .removeCard(card._id)
+            .then(() => {
+                setCards((cards) => cards.filter((c) => c._id !== card._id));
+            })
+            .catch((err) => console.log(err));
+    }
+
+    function handleAddPlaceSubmit(newCard) {
+        apiService
+            .addCard(newCard)
+            .then((newCardFull) => {
+                setCards([newCardFull, ...cards]);
+                closeAllPopups();
+            })
+            .catch((err) => console.log(err));
+    }
+
 
     return (
         <div className="container">
