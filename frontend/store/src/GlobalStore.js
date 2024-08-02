@@ -8,11 +8,11 @@ class GlobalStore {
         makeAutoObservable(this);
     }
 
-    setUser(user) {
+    setCurrentUser(user) {
         this.currentUser = user;
     }
 
-    setProducts(products) {
+    setCards(products) {
         this.cards = products;
     }
 

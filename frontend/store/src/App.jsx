@@ -7,7 +7,7 @@ import globalStore from "./GlobalStore";
 
 const App = observer(() => {
     const updateUser = () => {
-        globalStore.setUser({ name: "Jane Smith", age: 25 });
+        globalStore.setCurrentUser({ name: "Jane Smith", age: 25 });
     };
 
     return (
