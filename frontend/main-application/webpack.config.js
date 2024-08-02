@@ -78,7 +78,9 @@ module.exports = (_, argv) => ({
       name: "main_application",
       filename: "remoteEntry.js",
       remotes: {
-        auth_microfrontend: "auth_microfrontend@http://localhost:3001/remoteEntry.js"
+        auth_microfrontend: "auth_microfrontend@http://localhost:3001/remoteEntry.js",
+        profile_microfrontend: "profile_microfrontend@http://localhost:3002/remoteEntry.js",
+        shared_components: "shared_components@http://localhost:3003/remoteEntry.js",
       },
       exposes: {},
       shared: {
