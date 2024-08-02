@@ -1,3 +1,4 @@
+// ApiLayerService
 class Api {
   constructor({ address, token, groupId }) {
     // стандартная реализация -- объект options
@@ -8,10 +9,12 @@ class Api {
     // Запросы в примере работы выполняются к старому Api, в новом URL изменены.
   }
 
+  // ApiCardService and Auth
   getAppInfo() {
     return Promise.all([this.getCardList(), this.getUserInfo()]);
   }
 
+  // ApiCardService
   getCardList() {
     return fetch(`${this._address}/${this._groupId}/cards`, {
       headers: {
@@ -21,6 +24,7 @@ class Api {
       .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`));
   }
 
+  // ApiCardService
   addCard({ name, link }) {
     return fetch(`${this._address}/${this._groupId}/cards`, {
       method: 'POST',
@@ -36,6 +40,7 @@ class Api {
       .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`));
   }
 
+  // ApiCardService
   removeCard(cardID) {
     return fetch(`${this._address}/${this._groupId}/cards/${cardID}`, {
       method: 'DELETE',
@@ -46,6 +51,7 @@ class Api {
       .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`));
   }
 
+  // ApiProfileService
   getUserInfo() {
     return fetch(`${this._address}/${this._groupId}/users/me`, {
       headers: {
@@ -55,6 +61,7 @@ class Api {
       .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`));
   }
 
+  // ApiProfileService
   setUserInfo({ name, about }) {
     return fetch(`${this._address}/${this._groupId}/users/me`, {
       method: 'PATCH',
@@ -70,6 +77,7 @@ class Api {
       .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`));
   }
 
+  // ApiProfileService
   setUserAvatar({ avatar }) {
     return fetch(`${this._address}/${this._groupId}/users/me/avatar`, {
       method: 'PATCH',
@@ -84,6 +92,7 @@ class Api {
       .then(res => res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`));
   }
 
+  // ApiCardService
   changeLikeCardStatus(cardID, like) {
     // Обычная реализация: 2 разных метода для удаления и постановки лайка.
     return fetch(`${this._address}/${this._groupId}/cards/like/${cardID}`, {
