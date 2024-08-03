@@ -82,7 +82,7 @@ module.exports = (_, argv) => ({
         "./Login": "./src/components/Login",
         "./Register": "./src/components/Register",
         "./InfoTooltip": "./src/components/InfoTooltip",
-        "./ApiAuthService": "./src/api/AuthService",
+        "./AuthService": "./src/api/AuthService",
       },
       shared: {
         ...deps,

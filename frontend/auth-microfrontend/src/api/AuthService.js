@@ -4,9 +4,13 @@ const getResponse = (res) => {
     return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 };
 
-class ApiAuthService {
-    constructor({ baseUrl = BASE_URL }) {
+export default class AuthService {
+    constructor(baseUrl) {
         this._baseUrl = baseUrl;
+    }
+
+    debug() {
+        console.log("new output to check import")
     }
 
     register(email, password) {
@@ -49,5 +53,3 @@ class ApiAuthService {
             .then(getResponse);
     }
 }
-
-export default ApiAuthService;
