@@ -80,8 +80,8 @@ module.exports = (_, argv) => ({
       remotes: {
         auth_microfrontend: "auth_microfrontend@http://localhost:3001/remoteEntry.js",
         profile_microfrontend: "profile_microfrontend@http://localhost:3002/remoteEntry.js",
-        shared_components: "shared_components@http://localhost:3003/remoteEntry.js",
-        store: "store@http://localhost:3005/remoteEntry.js",
+        // shared_components: "shared_components@http://localhost:3003/remoteEntry.js",
+        // store: "store@http://localhost:3005/remoteEntry.js",
       },
       exposes: {},
       shared: {

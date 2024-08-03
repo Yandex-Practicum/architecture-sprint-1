@@ -4,22 +4,17 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom"
 
 import "./index.css";
+import { api } from './apiService'
 
 const Login = React.lazy(() => import("auth_microfrontend/Login"))
 const Register = React.lazy(() => import("auth_microfrontend/Register"))
 const InfoTooltip = React.lazy(() => import("auth_microfrontend/InfoTooltip"))
-const PopupWithForm = React.lazy(() => import("shared_components/PopupWithForm"))
-const globalStore = React.lazy(() => import("store/globalStore"))
+// const PopupWithForm = React.lazy(() => import("shared_components/PopupWithForm"))
+// const globalStore = React.lazy(() => import("store/globalStore"))
 
 
 const App = observer(() => {
-    import('auth_microfrontend/AuthService')
-        .then((module) => {
-            const AuthService = module.default;
-            const authServiceInstance = new AuthService('https://auth.nomoreparties.co');
-            authServiceInstance.debug();
-        })
-        .catch((error) => console.error('Ошибка при импорте AuthService:', error));
+    const promise = api.debug()
 
     return (
         <div className="container">

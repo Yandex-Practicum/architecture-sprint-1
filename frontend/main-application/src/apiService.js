@@ -1,3 +1,8 @@
+const API_ADDRESS = 'https://nomoreparties.co';
+const API_TOKEN = `80a75492-21c5-4330-a02f-308029e94b63`;
+const GROUP_ID = `cohort0`;
+const AUTH_URL = 'https://auth.nomoreparties.co';
+
 class ApiService {
   constructor({ address, token, groupId }) {
     // стандартная реализация -- объект options
@@ -97,31 +102,23 @@ class ApiService {
   }
 }
 
-
-
-
-
-const API_ADDRESS = 'https://nomoreparties.co';
-const API_TOKEN = `80a75492-21c5-4330-a02f-308029e94b63`;
-const GROUP_ID = `cohort0`;
-
-
 class Api {
   constructor() {
-    const commonConfig = {
-      address: API_ADDRESS,
-      token: API_TOKEN,
-      groupId: GROUP_ID,
-    };
-    this.cardService = new ApiCardService(commonConfig);
-    this.profileService = new ApiProfileService(commonConfig);
+    this.authServicePromise = import('auth_microfrontend/AuthService')
+        .then((module) => {
+          const AuthService = module.default;
+          this.authService = new AuthService('https://auth.nomoreparties.co');
+          return this.authService;
+        })
+        .catch((error) => {
+          console.error('Ошибка при импорте AuthService:', error);
+          throw error;
+        });
   }
 
-  getAppInfo() {
-    return Promise.all([
-      this.cardService.getCardList(),
-      this.profileService.getUserInfo()
-    ]);
+  async debug() {
+    const authService = await this.authServicePromise;
+    authService.debug()
   }
 }
 
@@ -134,6 +131,4 @@ const apiService = new ApiService({
   token: `80a75492-21c5-4330-a02f-308029e94b63`,
 });
 
-export default apiService;
-
-export { api, ApiService };
+export { api, apiService };
