@@ -84,4 +84,5 @@ Framework - Single-SPA<p/>
 
     npm install
 <h1>Задание 2</h1>
+
 ![Image1](task2.jpg)
