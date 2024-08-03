@@ -1,9 +1,0 @@
-.card__image {
-  min-height: 282px;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-
-.card__image:hover {
-  cursor: pointer;
-}

@@ -111,7 +111,7 @@ class Api {
           return this.authService;
         })
         .catch((error) => {
-          console.error('Ошибка при импорте AuthService:', error);
+          console.error('Fail to import AuthService:', error);
           throw error;
         });
   }
