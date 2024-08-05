@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from 'card/Card';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function Main({ cards, onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike, onCardDelete }) {
@@ -27,6 +27,7 @@ function Main({ cards, onEditProfile, onAddPlace, onEditAvatar, onCardClick, onC
               onCardClick={onCardClick}
               onCardLike={onCardLike}
               onCardDelete={onCardDelete}
+              currentUser={currentUser}
             />
           ))}
         </ul>
