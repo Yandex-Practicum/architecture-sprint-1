@@ -31,39 +31,39 @@ function App() {
   const [isInfoToolTipOpen, setIsInfoToolTipOpen] = React.useState(false);
   const [tooltipStatus, setTooltipStatus] = React.useState("");
 
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
   //В компоненты добавлены новые стейт-переменные: email — в компонент App
   const [email, setEmail] = React.useState("");
 
   const history = useHistory();
 
-  // Запрос к API за информацией о пользователе и массиве карточек выполняется единожды, при монтировании.
+  // Запрос к API за информацией о пользователе и массиве карточек выполняется каждый раз при логине.
   React.useEffect(() => {
-    api
-      .getAppInfo()
-      .then(([cardData, userData]) => {
-        setCurrentUser(userData);
-        setCards(cardData);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    if(isLoggedIn) {
+      api
+          .getAppInfo()
+          .then(([cardData, userData]) => {
+            setCurrentUser(userData);
+            setCards(cardData);
+          })
+          .catch((err) => console.log(err));
+    } else {
+      setCurrentUser({});
+      setCards([]);
+    }
+  }, [isLoggedIn]);
 
   // при монтировании App описан эффект, проверяющий наличие токена и его валидности
   React.useEffect(() => {
-    const token = localStorage.getItem("jwt");
-    if (token) {
-      auth
-        .checkToken(token)
-        .then((res) => {
-          setEmail(res.data.email);
-          setIsLoggedIn(true);
-          history.push("/");
-        })
-        .catch((err) => {
-          localStorage.removeItem("jwt");
-          console.log(err);
-        });
-    }
+    auth
+      .checkToken()
+      .then((res) => {
+        setEmail(res.email);
+      })
+      .catch((err) => {
+        setIsLoggedIn(false);
+        console.log(err);
+      })
   }, [history]);
 
   function handleEditProfileClick() {
@@ -144,12 +144,12 @@ function App() {
   function onRegister({ email, password }) {
     auth
       .register(email, password)
-      .then((res) => {
+      .then(() => {
         setTooltipStatus("success");
         setIsInfoToolTipOpen(true);
         history.push("/signin");
       })
-      .catch((err) => {
+      .catch(() => {
         setTooltipStatus("fail");
         setIsInfoToolTipOpen(true);
       });
@@ -158,23 +158,23 @@ function App() {
   function onLogin({ email, password }) {
     auth
       .login(email, password)
-      .then((res) => {
+      .then(() => {
         setIsLoggedIn(true);
         setEmail(email);
         history.push("/");
       })
-      .catch((err) => {
+      .catch(() => {
         setTooltipStatus("fail");
         setIsInfoToolTipOpen(true);
       });
   }
 
   function onSignOut() {
-    // при вызове обработчика onSignOut происходит удаление jwt
-    localStorage.removeItem("jwt");
-    setIsLoggedIn(false);
-    // После успешного вызова обработчика onSignOut происходит редирект на /signin
-    history.push("/signin");
+    auth.logout().then(() => {
+      setIsLoggedIn(false);
+      // После успешного вызова обработчика onSignOut происходит редирект на /signin
+      history.push("/signin");
+    })
   }
 
   return (

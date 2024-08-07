@@ -22,9 +22,21 @@ const login = (req: Request, res: Response, next: NextFunction) => {
 
           maxAge: 3600000,
           httpOnly: true,
-          sameSite: true,
+          sameSite: 'none',
+          secure: true,
         })
         .send({ data: user.toJSON() });
+    })
+    .catch(next);
+};
+
+const logout = (req: Request, res: Response, next: NextFunction) => {
+  return Promise
+    .resolve()
+    .then(() => {
+      res
+        .clearCookie('jwt')
+        .send({});
     })
     .catch(next);
 };
@@ -92,5 +104,5 @@ const updateUserAvatar = (
 ) => updateUserData(req, res, next);
 
 export {
-  createUser, getCurrentUser, getUser, getUsers, login, updateUserAvatar, updateUserInfo,
+  createUser, getCurrentUser, getUser, getUsers, login, logout, updateUserAvatar, updateUserInfo,
 };

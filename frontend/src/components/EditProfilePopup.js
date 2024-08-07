@@ -37,9 +37,10 @@ function EditProfilePopup({ isOpen, onUpdateUser, onClose }) {
       isOpen={isOpen} onSubmit={handleSubmit} onClose={onClose} title="Редактировать профиль" name="edit"
     >
       <label className="popup__label">
+        {/* TODO: pattern был не корректным, валилась ошибка */}
         <input type="text" name="userName" id="owner-name"
                className="popup__input popup__input_type_name" placeholder="Имя"
-               required minLength="2" maxLength="40" pattern="[a-zA-Zа-яА-Я -]{1,}"
+               required minLength="2" maxLength="40"
                value={name || ''} onChange={handleNameChange} />
         <span className="popup__error" id="owner-name-error"></span>
       </label>

@@ -4,7 +4,7 @@ import {
   Router,
 } from 'express';
 import {
-  createUser, login,
+  createUser, login, logout,
 } from '../controllers/users';
 import NotFoundError from '../errors/not-found-error';
 import auth from '../middlewares/auth';
@@ -15,6 +15,7 @@ import userRouter from './users';
 const router = Router();
 router.post('/signup', validateUserBody, createUser);
 router.post('/signin', validateAuthentication, login);
+router.delete('/logout', logout);
 
 router.use(auth);
 router.use('/users', userRouter);

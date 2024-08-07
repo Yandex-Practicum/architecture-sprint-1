@@ -6,6 +6,10 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
+ARG REACT_APP_BACKEND_BASE_URL
+
+ENV REACT_APP_BACKEND_BASE_URL $REACT_APP_BACKEND_BASE_URL
+
 RUN npm i \
     && npm i -g jest \
     && npx playwright install --with-deps chromium
