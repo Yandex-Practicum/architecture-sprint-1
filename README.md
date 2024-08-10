@@ -1,3 +1,5 @@
+# Задание №1:
+
 #### Дано:
 Дан веб-сайт, представляющий собой клиент-серверную архитектуру с реализацией клиента с использованием фреймворка React на языке JavaScript,
 а также бэкенда на языке TypeScript с использованием фреймворка Express.js и хранилищем MongoDB.
@@ -117,3 +119,7 @@ npm start
 
 #### Диаграмма архитектуры микрофронтендов:
 ![microfrontends_diagram.drawio.svg](microfrontends_diagram.drawio.svg)
+
+
+# Задание №2:
+![solution1.2.drawio.svg](solution1.2.drawio.svg)
