@@ -1,7 +1,6 @@
 import React from 'react';
-import PopupWithForm from './PopupWithForm';
 
-function EditAvatarPopup({ isOpen, onUpdateAvatar, onClose }) {
+function EditAvatarPopup({ isOpen, onUpdateAvatar, onClose, PopupWithForm }) {
   const inputRef = React.useRef();
 
   function handleSubmit(e) {
