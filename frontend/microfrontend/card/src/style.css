@@ -1,0 +1,127 @@
+.places {
+    font-family: 'Inter', Arial, sans-serif;
+    padding: 15px 0 36px;
+}
+
+@media screen and (max-width: 568px) {
+    .places {
+        padding: 15px 0 18px;
+    }
+}
+
+.places__item {
+
+}
+
+.places__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 282px);
+    justify-content: center;
+    grid-gap: 20px 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    font-family: 'Inter', Arial, sans-serif;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__title {
+    max-width: 220px;
+    font-size: 24px;
+    line-height: 29px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /*Либо с точками из макета, либо этот набор свойств для эллипсиса текста в можно лучше*/
+    margin: 0;
+}
+
+.card__like-count {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+.card__like-button {
+    width: 21px;
+    height: 18px;
+    background: transparent url('like-inactive.svg') no-repeat;
+    /*Потом это будет из модификатора*/
+    background-size: 21px 18px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.card__like-button:hover {
+    opacity: 0.6;
+}
+
+.card__like-button_is-active {
+    background: transparent url('like-active.svg') no-repeat;
+}
+
+.card__image {
+    min-height: 282px;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.card__image:hover {
+    cursor: pointer;
+}
+
+.card__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 25px 20px;
+    /*Чтобы по ПЭПЭ отступы снизу-сверху одинаковые            */
+}
+
+.card__delete-button {
+    width: 18px;
+    height: 18px;
+    background: transparent url('delete-icon.svg') center no-repeat;
+    /*Потом это будет из модификатора*/
+    background-size: 18px 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.card__delete-button:hover {
+    opacity: 0.6;
+}
+
+.card__delete-button_visible {
+    display: block;
+}
+
+.card__delete-button_hidden {
+    display: none;
+}

@@ -1,0 +1,246 @@
+.profile {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 36px 0;
+    /*Если подгонять под ПЭПЭ, то тут padding: 40px 0; Проявите лоялити*/
+}
+
+@media screen and (max-width: 480px) {
+    .profile {
+        padding: 43px 0;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.profile__title {
+    font-size: 42px;
+    line-height: 48px;
+    /*Подгон под ПЭПЭ - без него 56px*/
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /*Либо с точками из макета, либо этот набор свойств для эллипсиса текста в можно лучше*/
+    grid-area: title;
+    margin: 0;
+}
+
+@media screen and (max-width: 740px) {
+    .profile__title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .profile__title {
+        font-size: 27px;
+        line-height: 33px;
+        /*По макету 56px. Проявите лоялити к студенту*/
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile__title {
+        min-width: 201px;
+        /*
+          Это по макету. Вообще я считаю тут должен быть отступ до иконки, но фрейм у заголовка кривой.
+          Проявите лоялити к студенту
+        */
+    }
+}
+.profile__info {
+    display: grid;
+    grid-template-areas: "title button"
+  "description description";
+    grid-template-columns: minmax(auto, 295px) auto;
+    /*Можно не гридить*/
+    grid-gap: 9px 17px;
+    /*Подгон под ПЭПЭ, без него - 16px*/
+}
+
+@media screen and (max-width: 740px) {
+    .profile__info {
+        grid-template-columns: minmax(auto, 228px) auto;
+        grid-gap: 9px 5px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .profile__info {
+        grid-template-columns: minmax(auto, 195px) auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile__info {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 26px 0 33px 0;
+    }
+}
+.profile__image {
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-size: cover;
+    /*Ковер тут симпатичнее контейна*/
+    background-position: center;
+    position: relative;
+    margin: 0 29px 0 0;
+    /*Макет очень кривоват, как считать этот отступ я хз. Проявите тут лояльность пока что*/
+}
+
+.profile__image:hover {
+    cursor: pointer;
+}
+
+.profile__image::before,
+.profile__image::after {
+    content: '';
+    position: absolute;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.profile__image::before {
+    background: rgba(0, 0, 0, 0);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.profile__image::after {
+    width: 26px;
+    height: 26px;
+    background-image: url('edit-icon.svg');
+    -webkit-background-size: contain;
+    background-size: contain;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.profile__image:hover::before {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.profile__image:hover::after {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 740px) {
+    .profile__image {
+        margin: 0 10px 0 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile__image {
+        margin-right: 0;
+    }
+}
+.profile__edit-button {
+    width: 24px;
+    height: 24px;
+    background: transparent url('edit-icon.svg') center no-repeat;
+    /*Шортхэнды пора бы знать, хотя бы в можно лучше*/
+    background-size: 10px 10px;
+    border: 1px solid #fff;
+    grid-area: button;
+    align-self: center;
+    /*Можно марджином тут выровнять под ПЭПЭ, но тут оставил AS.*/
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    /*Транзишн пора бы уже знать*/
+    padding: 0;
+    margin: 0;
+}
+
+.profile__edit-button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 480px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+        background-size: 8px 8px;
+    }
+}
+.profile__description {
+    font-size: 18px;
+    line-height: 22px;
+    grid-area: description;
+    margin: 0;
+}
+
+@media screen and (max-width: 568px) {
+    .profile__description {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile__description {
+        width: 100%;
+        margin: 7px 0 0 0;
+    }
+}
+.profile__add-button {
+    width: 150px;
+    height: 50px;
+    background: transparent url("add-icon.svg") center no-repeat;
+    background-size: 22px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    /*Че это*/
+    border: 2px solid #fff;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.profile__add-button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 740px) {
+    .profile__add-button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile__add-button {
+        width: 100%;
+    }
+}
