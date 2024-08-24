@@ -1,0 +1,13 @@
+{
+  "name": "microfrontend",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "host-app"
+  ],
+  "scripts": {
+    "start": "yarn workspace host-app start",
+    "build:host": "yarn workspace host-app build",
+    "test:host": "yarn workspace host-app test"
+  }
+}
