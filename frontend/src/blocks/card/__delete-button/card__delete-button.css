@@ -2,7 +2,6 @@
   width: 18px;
   height: 18px;
   background: transparent url('../../../images/delete-icon.svg') center no-repeat;
-  /*Потом это будет из модификатора*/
   background-size: 18px 18px;
   border: none;
   cursor: pointer;
