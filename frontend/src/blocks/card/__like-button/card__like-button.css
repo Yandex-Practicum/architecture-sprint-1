@@ -2,7 +2,6 @@
   width: 21px;
   height: 18px;
   background: transparent url('../../../images/like-inactive.svg') no-repeat;
-  /*Потом это будет из модификатора*/
   background-size: 21px 18px;
   border: none;
   cursor: pointer;

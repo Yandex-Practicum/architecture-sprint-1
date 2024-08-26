@@ -3,9 +3,7 @@
   grid-template-areas: "title button"
   "description description";
   grid-template-columns: minmax(auto, 295px) auto;
-  /*Можно не гридить*/
   grid-gap: 9px 17px;
-  /*Подгон под ПЭПЭ, без него - 16px*/
 }
 
 @media screen and (max-width: 740px) {

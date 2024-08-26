@@ -6,14 +6,10 @@
 
 .header {
   min-height: 120px;
-  /*Если подгонять под ПЭПЭ, то тут min-height: 117px;*/
   font-family: 'Inter', Arial, sans-serif;
   display: flex;
   align-items: center;
-  /*border-bottom: 1px solid rgba(84, 84, 84, 0.7);*/
-  /*Перевести в RGBA, чтобы учесть opacity*/
   flex-shrink: 0;
-  /*Стики футер*/
   justify-content: space-between;
 }
 
@@ -30,10 +26,8 @@
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  /*Центруем. Студенты знают про транслейт*/
   bottom: 0;
 }
-/*Лучшее решение здесь -- можно лучше*/
 
 @media screen and (max-width: 480px) {
   .header {
