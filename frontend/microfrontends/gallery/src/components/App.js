@@ -1,19 +1,19 @@
 import React from "react";
 import { Route, useHistory, Switch } from "react-router-dom";
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
-import PopupWithForm from "./PopupWithForm";
+import Header from "../../../profile/src/components/Header.js";
+import Main from "../../../../src/components/Main.js";
+import Footer from "../../../profile/src/components/Footer.js";
+import PopupWithForm from "../../../../src/components/PopupWithForm.js";
 import ImagePopup from "./ImagePopup";
-import api from "../utils/api";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import EditProfilePopup from "./EditProfilePopup";
-import EditAvatarPopup from "./EditAvatarPopup";
-import AddPlacePopup from "./AddPlacePopup";
-import Register from "./Register";
+import api from "../../../../src/utils/api.js";
+import { CurrentUserContext } from "../../../../src/contexts/CurrentUserContext.js";
+import EditProfilePopup from "../../../profile/src/components/EditProfilePopup.js";
+import EditAvatarPopup from "../../../profile/src/components/EditAvatarPopup.js";
+import AddPlacePopup from "./AddPlacePopup.js";
+import Register from "../../../profile/src/components/Register.js";
 import Login from "./Login";
-import InfoTooltip from "./InfoTooltip";
-import ProtectedRoute from "./ProtectedRoute";
+import InfoTooltip from "../../../../src/components/InfoTooltip.js";
+import ProtectedRoute from "../../../../src/components/ProtectedRoute.js";
 import * as auth from "../utils/auth.js";
 
 function App() {
