@@ -55,6 +55,9 @@ microfrontend
             Main.js
             PopupWithForm.js
             ProtectedRoute.js
+            index.js
+            serviceWorker.js
+            setupTests.js
         /utils
             api.js
        /blocks
