@@ -14,35 +14,63 @@
 производительное решение, для платежей - надежное и т. д.) и увеличения надежности при отказе одного из
 компонентов (будет достигаться большей изоляцией компонентов по сравнению с MF).
 
-В приложение выделено 4 микрофронтенда:
+## Уровень 2. Планирование изменений
+
+В приложение выделено 5 микрофронтендов:
 1. Host - микрофронтенд, содержащий общие компоненты и отвечающий за координацию вызовов остальных МФ.
 2. Auth - МФ, отвечающий за аутентификацию и регистрацию юзеров
 3. Cards - МФ, отвечающий за работу с фотографиями
 4. Places - МФ, отвечаюий за работу с местами (на раннем этапе можно объединить с МФ 3)
 5. Profiles - МФ, отвечающий за работу с профилями пользователя (на раннем этапе можно объединить с МФ 2)
 
-## Уровень 2. Планирование изменений
+Микрофронтенды разбиты принципом вертикальной нарезки - так как границы доменных областей хорошо видны, а 
+также есть наличие shared компонентов и отсутствует необходимость в автономности команд.
+    
+
 Структура:
 ```
 microfrontend
-    /auth
-        Login.js
-        Register.js
-        auth.js
-    /cards
-        Card.js
-        ImagePopup.js
-    /host
-        App.js
-        Footer.js
-        Header.js
-        InfoTooltip.js
-        Main.js
-        PopupWithForm.js
-        ProtectedRoute.js
-        api.js
-    /places
-        AddPlacePopup.js
-    /profiles
-        EditAvatarPopup.js
+    /auth/src
+        /components
+            Login.js
+            Register.js
+            CurrentUserContext
+        /utils
+            auth.js
+        /blocks
+            auth-form/
+            login/
+    /cards/src
+        /components
+            Card.js
+            ImagePopup.js
+        /blocks
+            card/
+    /host/src
+        /components
+            App.js
+            Footer.js
+            Header.js
+            InfoTooltip.js
+            Main.js
+            PopupWithForm.js
+            ProtectedRoute.js
+        /utils
+            api.js
+       /blocks
+            footer/
+            header/
+            page/
+            content/
+            popup/
+    /places/src
+        /components
+            AddPlacePopup.js
+        /blocks
+            places/
+    /profiles/src
+        /components
+            EditAvatarPopup.js
+        /blocks
+            profile/
 ```

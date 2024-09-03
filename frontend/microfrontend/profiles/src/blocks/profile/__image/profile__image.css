@@ -37,7 +37,7 @@
 .profile__image::after {
   width: 26px;
   height: 26px;
-  background-image: url('../../../images/edit-icon.svg');
+  background-image: url('../../../../../host/src/images/edit-icon.svg');
   -webkit-background-size: contain;
   background-size: contain;
   opacity: 0;

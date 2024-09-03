@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "../../../cards/src/components/ImagePopup";
 import api from "../../utils/api";
-import { CurrentUserContext } from "../../../../src/contexts/CurrentUserContext";
+import { CurrentUserContext } from "../../../auth/src/components/CurrentUserContext";
 import EditProfilePopup from "../../../profiles/src/components/EditProfilePopup";
 import EditAvatarPopup from "../../../profiles/src/components/EditAvatarPopup";
 import AddPlacePopup from "../../../places/src/components/AddPlacePopup";
