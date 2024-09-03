@@ -60,7 +60,7 @@ microfrontend
             setupTests.js
         /utils
             api.js
-       /blocks
+        /blocks
             footer/
             header/
             page/
