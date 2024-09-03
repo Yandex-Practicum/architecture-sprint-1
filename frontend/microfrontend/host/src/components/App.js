@@ -4,17 +4,17 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
-import ImagePopup from "./ImagePopup";
-import api from "../utils/api";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import EditProfilePopup from "./EditProfilePopup";
-import EditAvatarPopup from "./EditAvatarPopup";
-import AddPlacePopup from "./AddPlacePopup";
-import Register from "./Register";
-import Login from "./Login";
+import ImagePopup from "../../../cards/src/components/ImagePopup";
+import api from "../../utils/api";
+import { CurrentUserContext } from "../../../../src/contexts/CurrentUserContext";
+import EditProfilePopup from "../../../profiles/src/components/EditProfilePopup";
+import EditAvatarPopup from "../../../profiles/src/components/EditAvatarPopup";
+import AddPlacePopup from "../../../places/src/components/AddPlacePopup";
+import Register from "../../../auth/src/components/Register";
+import Login from "../../../auth/src/components/Login";
 import InfoTooltip from "./InfoTooltip";
 import ProtectedRoute from "./ProtectedRoute";
-import * as auth from "../utils/auth.js";
+import * as auth from "../../../auth/src/utils/auth.js";
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =

@@ -1,6 +1,6 @@
 import React from 'react';
-import SuccessIcon from '../images/success-icon.svg';
-import ErrorIcon from '../images/error-icon.svg';
+import SuccessIcon from '../../../../src/images/success-icon.svg';
+import ErrorIcon from '../../../../src/images/error-icon.svg';
 
 function InfoTooltip({ isOpen, onClose, status }) {
   const icon = status === 'success' ? SuccessIcon : ErrorIcon
@@ -22,5 +22,3 @@ function InfoTooltip({ isOpen, onClose, status }) {
 }
 
 export default InfoTooltip;
-
- 
