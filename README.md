@@ -35,7 +35,6 @@ microfrontend
     /auth/src
         /components
             Login.js
-            Register.js
             CurrentUserContext
         /utils
             auth.js
@@ -75,6 +74,7 @@ microfrontend
             places/
     /profiles/src
         /components
+            Register.js
             EditAvatarPopup.js
         /blocks
             profile/

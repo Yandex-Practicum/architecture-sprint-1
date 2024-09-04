@@ -10,7 +10,7 @@ import { CurrentUserContext } from "../../../auth/src/components/CurrentUserCont
 import EditProfilePopup from "../../../profiles/src/components/EditProfilePopup";
 import EditAvatarPopup from "../../../profiles/src/components/EditAvatarPopup";
 import AddPlacePopup from "../../../places/src/components/AddPlacePopup";
-import Register from "../../../auth/src/components/Register";
+import Register from "../../../profiles/src/components/Register";
 import Login from "../../../auth/src/components/Login";
 import InfoTooltip from "./InfoTooltip";
 import ProtectedRoute from "./ProtectedRoute";
