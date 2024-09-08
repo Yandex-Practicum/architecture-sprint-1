@@ -1,0 +1,6 @@
+.popup_is-opened {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  transition: visibility 0s, opacity 0.6s !important;
+}

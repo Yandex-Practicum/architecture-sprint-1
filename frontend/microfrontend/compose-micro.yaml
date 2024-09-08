@@ -1,0 +1,37 @@
+services:
+
+  frontend-host:
+    build:
+      context: ./host
+      dockerfile: Docker.frontend.host
+    ports:
+      - 8095:8095
+    container_name: frontend-host
+    stdin_open: true
+
+  frontend-auth:
+    build:
+      context: ./auth
+      dockerfile: Docker.frontend.auth
+    ports:
+      - 8091:8091
+    container_name: frontend-auth
+    stdin_open: true
+
+  frontend-profile:
+    build:
+      context: ./profile
+      dockerfile: Docker.frontend.profile
+    ports:
+      - 8092:8092
+    container_name: frontend-profile
+    stdin_open: true
+
+  frontend-cards:
+    build:
+      context: ./cards
+      dockerfile: Docker.frontend.cards
+    ports:
+      - 8093:8093
+    container_name: frontend-cards
+    stdin_open: true
