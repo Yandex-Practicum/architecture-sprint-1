@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../../microfrontend/card/src/components/Card';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function Main({ cards, onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike, onCardDelete }) {
