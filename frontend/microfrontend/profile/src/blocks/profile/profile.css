@@ -1,0 +1,22 @@
+@import url('microfrontend/profile/src/blocks/profile/__description/profile__description.css');
+@import url('microfrontend/profile/src/blocks/profile/__add-button/profile__add-button.css');
+@import url('microfrontend/profile/src/blocks/profile/__edit-button/profile__edit-button.css');
+@import url('microfrontend/profile/src/blocks/profile/__info/profile__info.css');
+@import url('microfrontend/profile/src/blocks/profile/__title/profile__title.css');
+@import url('microfrontend/profile/src/blocks/profile/__image/profile__image.css');
+
+.profile {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 36px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .profile {
+    padding: 43px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+}
