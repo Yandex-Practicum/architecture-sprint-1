@@ -1,0 +1,37 @@
+@import url('microfrontend/root/src/blocks/popup/__content/popup__content.css');
+@import url('microfrontend/root/src/blocks/popup/__content/_content/popup__content_content_image.css');
+@import url('microfrontend/root/src/blocks/popup/__close/popup__close.css');
+@import url('microfrontend/root/src/blocks/popup/__title/popup__title.css');
+@import url('microfrontend/root/src/blocks/popup/__form/popup__form.css');
+@import url('microfrontend/root/src/blocks/popup/__input/popup__input.css');
+@import url('microfrontend/root/src/blocks/popup/__input/_type/popup__input_type_error.css');
+@import url('microfrontend/root/src/blocks/popup/__button/popup__button.css');
+@import url('microfrontend/root/src/blocks/popup/__button/_disabled/popup__button_disabled.css');
+@import url('microfrontend/root/src/blocks/popup/__caption/popup__caption.css');
+@import url('microfrontend/root/src/blocks/popup/__image/popup__image.css');
+@import url('microfrontend/root/src/blocks/popup/__label/popup__label.css');
+@import url('microfrontend/root/src/blocks/popup/__error/popup__error.css');
+@import url('microfrontend/root/src/blocks/popup/__error/_visible/popup__error_visible.css');
+@import url('microfrontend/root/src/blocks/popup/_type/popup_type_remove-card.css');
+@import url('microfrontend/root/src/blocks/popup/_type/popup_type_edit-avatar.css');
+@import url('microfrontend/root/src/blocks/popup/__icon/popup__icon.css');
+@import url('microfrontend/root/src/blocks/popup/__status-message/popup__status-message.css');
+
+.popup {
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: visibility 0s 0.6s, opacity 0.6s;
+  z-index: 10;
+}

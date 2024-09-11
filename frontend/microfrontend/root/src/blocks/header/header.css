@@ -1,8 +1,8 @@
-@import url('./__logo/header__logo.css');
-@import url('./__auth-link/header__auth-link.css');
-@import url('./__wrapper/header__wrapper.css');
-@import url('./__user/header__user.css');
-@import url('./__logout/header__logout.css');
+@import url('microfrontend/root/src/blocks/header/__logo/header__logo.css');
+@import url('microfrontend/root/src/blocks/header/__auth-link/header__auth-link.css');
+@import url('microfrontend/root/src/blocks/header/__wrapper/header__wrapper.css');
+@import url('microfrontend/root/src/blocks/header/__user/header__user.css');
+@import url('microfrontend/root/src/blocks/header/__logout/header__logout.css');
 
 .header {
   min-height: 120px;
