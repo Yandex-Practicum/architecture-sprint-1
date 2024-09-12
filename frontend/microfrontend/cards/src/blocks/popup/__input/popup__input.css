@@ -1,0 +1,26 @@
+.popup__input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 0 0 13px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: border-bottom 0.3s;
+}
+
+.popup__input:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 568px) {
+  .popup__title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

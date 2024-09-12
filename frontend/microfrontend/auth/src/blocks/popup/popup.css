@@ -1,0 +1,37 @@
+@import url('./__content/popup__content.css');
+@import url('./__content/_content/popup__content_content_image.css');
+@import url('./__close/popup__close.css');
+@import url('./__title/popup__title.css');
+@import url('./__form/popup__form.css');
+@import url('./__input/popup__input.css');
+@import url('./__input/_type/popup__input_type_error.css');
+@import url('./__button/popup__button.css');
+@import url('./__button/_disabled/popup__button_disabled.css');
+@import url('./__caption/popup__caption.css');
+@import url('./__image/popup__image.css');
+@import url('./__label/popup__label.css');
+@import url('./__error/popup__error.css');
+@import url('./__error/_visible/popup__error_visible.css');
+@import url('./_type/popup_type_remove-card.css');
+@import url('./_type/popup_type_edit-avatar.css');
+@import url('./__icon/popup__icon.css');
+@import url('./__status-message/popup__status-message.css');
+
+.popup {
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: visibility 0s 0.6s, opacity 0.6s;
+  z-index: 10;
+}
