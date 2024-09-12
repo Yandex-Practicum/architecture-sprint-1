@@ -40,20 +40,18 @@
 		<li>проверка токена</li>
 </ul>
 <br/>
-3) user-profile микрофронтенд  
+3) user-profile микрофронтенд -метаданные профиля
 <ul>
-	<ul>Метаданные профиля
-		<li>аватарка (просмотр, редактирование)</li>
-		<li>имя, занятия (просмотр, редактирование)</li>
-	</ul>
-	<ul>  Работка с карточками
-		<li>просмотр карточек</li>
-		<li>создание карточки</li>
-		<li> удаление карточки</li>
-		<li>лайки карточки</li>
-	</ul>
+  <li>аватарка (просмотр, редактирование)</li>
+  <li>имя, занятия (просмотр, редактирование)</li>
 </ul>
-
+4) user-card микрофронтенд - работас карточками пользователя
+<ul>  Работка с карточками
+	<li>просмотр карточек</li>
+	<li>создание карточки</li>
+	<li> удаление карточки</li>
+	<li>лайки карточки</li>
+</ul>
 
 Сктруктура проекта  <b> микрофронтенда  host</b>
 <code>
@@ -109,6 +107,7 @@
 
 структура проекта <b> микрофронтенда user-profile </b>
 <code>
+структура проекта микрофронтенда user-profile 
 │   App.js
 │   App.jsx
 │   index.css
@@ -116,59 +115,16 @@
 │   index.js
 │   Main.js
 │   ProtectedRoute.js
-│
 ├───components
-│       AddPlacePopup.js
-│       Card.js
 │       EditAvatarPopup.js
 │       EditProfilePopup.js
-│       PopupWithForm.js
-│
 ├───contexts
 │       CurrentUserContext.js
-│
 ├───images
 │       add-icon.svg
-│       close.svg
 │       delete-icon.svg
 │       edit-icon.svg
-│       like-active.svg
-│       like-inactive.svg
-│
 ├───styles
-│   ├───card
-│   │   │   card.css
-│   │   │
-│   │   ├───__delete-button
-│   │   │   │   card__delete-button.css
-│   │   │   │
-│   │   │   ├───_hidden
-│   │   │   │       card__delete-button_hidden.css
-│   │   │   │
-│   │   │   └───_visible
-│   │   │           card__delete-button_visible.css
-│   │   │
-│   │   ├───__description
-│   │   │       card__description.css
-│   │   │
-│   │   ├───__image
-│   │   │       card__image.css
-│   │   │
-│   │   ├───__like-button
-│   │   │   │   card__like-button.css
-│   │   │   │
-│   │   │   └───_is-active
-│   │   │           card__like-button_is-active.css
-│   │   │
-│   │   ├───__like-count
-│   │   │       card__like-count.css
-│   │   │
-│   │   └───__title
-│   │           card__title.css
-│   │
-│   ├───content
-│   │       content.css
-│   │
 │   ├───page
 │   │   │   page.css
 │   │   │
@@ -177,74 +133,16 @@
 │   │   │
 │   │   └───__section
 │   │           page__section.css
-│   │
-│   ├───places
-│   │   │   places.css
-│   │   │
-│   │   ├───__item
-│   │   │       places__item.css
-│   │   │
-│   │   └───__list
-│   │           places__list.css
-│   │
-│   ├───popup
-│   │   │   popup.css
-│   │   │
-│   │   ├───_is-opened
-│   │   │       popup_is-opened.css
-│   │   │
-│   │   ├───_type
-│   │   │       popup_type_edit-avatar.css
-│   │   │       popup_type_remove-card.css
-│   │   │
-│   │   ├───__button
-│   │   │   │   popup__button.css
-│   │   │   │
-│   │   │   └───_disabled
-│   │   │           popup__button_disabled.css
-│   │   │
-│   │   ├───__caption
-│   │   │       popup__caption.css
-│   │   │
-│   │   ├───__close
-│   │   │       popup__close.css
+│   ├───content
+│   │       content.css
+│   ├───page
+│   │   │   page.css
 │   │   │
 │   │   ├───__content
-│   │   │   │   popup__content.css
-│   │   │   │
-│   │   │   └───_content
-│   │   │           popup__content_content_image.css
+│   │   │       page__content.css
 │   │   │
-│   │   ├───__error
-│   │   │   │   popup__error.css
-│   │   │   │
-│   │   │   └───_visible
-│   │   │           popup__error_visible.css
-│   │   │
-│   │   ├───__form
-│   │   │       popup__form.css
-│   │   │
-│   │   ├───__icon
-│   │   │       popup__icon.css
-│   │   │
-│   │   ├───__image
-│   │   │       popup__image.css
-│   │   │
-│   │   ├───__input
-│   │   │   │   popup__input.css
-│   │   │   │
-│   │   │   └───_type
-│   │   │           popup__input_type_error.css
-│   │   │
-│   │   ├───__label
-│   │   │       popup__label.css
-│   │   │
-│   │   ├───__status-message
-│   │   │       popup__status-message.css
-│   │   │
-│   │   └───__title
-│   │           popup__title.css
-│   │
+│   │   └───__section
+│   │           page__section.css
 │   └───profile
 │       │   profile.css
 │       │
@@ -267,7 +165,110 @@
 │               profile__title.css
 │
 └───utils
-        api.js
+api.js
+</code>
+
+структура проекта <b> микрофронтенда user-card </b>
+<code>
+│   App.js
+│   App.jsx
+│   index.css
+│   index.html
+│   index.js
+│   Main.js
+│   ProtectedRoute.js
+├───components
+│       AddPlacePopup.js
+│       Card.js
+│       PopupWithForm.js
+├───contexts
+│       CurrentUserContext.js
+├───images
+│       close.svg
+│       like-active.svg
+│       like-inactive.svg
+├───styles
+│   ├───card
+│   │   │   card.css
+│   │   │
+│   │   ├───__delete-button
+│   │   │   │   card__delete-button.css
+│   │   │   │
+│   │   │   ├───_hidden
+│   │   │   │       card__delete-button_hidden.css
+│   │   │   │
+│   │   │   └───_visible
+│   │   │           card__delete-button_visible.css
+│   │   ├───__description
+│   │   │       card__description.css
+│   │   ├───__image
+│   │   │       card__image.css
+│   │   ├───__like-button
+│   │   │   │   card__like-button.css
+│   │   │   │
+│   │   │   └───_is-active
+│   │   │           card__like-button_is-active.css
+│   │   ├───__like-count
+│   │   │       card__like-count.css
+│   │   │
+│   │   └───__title
+│   │           card__title.css
+│   ├───places
+│   │   │   places.css
+│   │   │
+│   │   ├───__item
+│   │   │       places__item.css
+│   │   │
+│   │   └───__list
+│   │           places__list.css
+│   ├───popup
+│   │   │   popup.css
+│   │   │
+│   │   ├───_is-opened
+│   │   │       popup_is-opened.css
+│   │   ├───_type
+│   │   │       popup_type_edit-avatar.css
+│   │   │       popup_type_remove-card.css
+│   │   │
+│   │   ├───__button
+│   │   │   │   popup__button.css
+│   │   │   │
+│   │   │   └───_disabled
+│   │   │           popup__button_disabled.css
+│   │   ├───__caption
+│   │   │       popup__caption.css
+│   │   │
+│   │   ├───__close
+│   │   │       popup__close.css
+│   │   ├───__content
+│   │   │   │   popup__content.css
+│   │   │   │
+│   │   │   └───_content
+│   │   │           popup__content_content_image.css
+│   │   ├───__error
+│   │   │   │   popup__error.css
+│   │   │   │
+│   │   │   └───_visible
+│   │   │           popup__error_visible.css
+│   │   ├───__form
+│   │   │       popup__form.css
+│   │   ├───__icon
+│   │   │       popup__icon.css
+│   │   ├───__image
+│   │   │       popup__image.css
+│   │   ├───__input
+│   │   │   │   popup__input.css
+│   │   │   │
+│   │   │   └───_type
+│   │   │           popup__input_type_error.css
+│   │   ├───__label
+│   │   │       popup__label.css
+│   │   ├───__status-message
+│   │   │       popup__status-message.css
+│   │   └───__title
+│   │           popup__title.css
+└───utils
+api.js
 </code>
 
 
