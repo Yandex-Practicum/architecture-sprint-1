@@ -1,0 +1,6 @@
+@import url('microfrontend/root/src/blocks/page/__content/page__content.css');
+@import url('microfrontend/root/src/blocks/page/__section/page__section.css');
+
+.page {
+  background: #000;
+}
