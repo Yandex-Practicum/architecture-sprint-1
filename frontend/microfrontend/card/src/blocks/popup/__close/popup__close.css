@@ -1,0 +1,23 @@
+.popup__close {
+  width: 35px;
+  height: 35px;
+  background: transparent url('../../../images/close.svg') center no-repeat;
+  background-size: 35px 35px;
+  border: none;
+  position: absolute;
+  top: -36px;
+  right: -34px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: visibility 0s, opacity 0.3s;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+}

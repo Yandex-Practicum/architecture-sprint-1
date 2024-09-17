@@ -3,6 +3,8 @@ services:
   mongo:
     image: mongo
     restart: always
+    ports:
+      - 27017:27017
     logging:
       driver: none
     healthcheck:
@@ -37,9 +39,9 @@ services:
       - 3001:3000
     healthcheck:
       interval: 10s
-      timeout: 2s 
-      start_period: 15s 
-      retries: 5 
+      timeout: 2s
+      start_period: 15s
+      retries: 5
       test: node healthcheck.js
 
   frontend-test:

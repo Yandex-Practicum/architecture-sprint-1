@@ -14,6 +14,9 @@ module.exports = (_, argv) => ({
 
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+    alias: {
+      'shared_shared': path.resolve(__dirname, '../shared'),
+    },
   },
 
   devServer: {
@@ -66,23 +69,36 @@ module.exports = (_, argv) => ({
   },
 
   plugins: [
-    // new ModuleFederationPlugin({
-    //   name: "host",
-    //   filename: "remoteEntry.js",
-    //   remotes: {},
-    //   exposes: {},
-    //   shared: {
-    //     ...deps,
-    //     react: {
-    //       singleton: true,
-    //       requiredVersion: deps.react,
-    //     },
-    //     "react-dom": {
-    //       singleton: true,
-    //       requiredVersion: deps["react-dom"],
-    //     },
-    //   },
-    // }),
+    new ModuleFederationPlugin({
+      name: "host",
+      filename: "remoteEntry.js",
+      remotes: {
+        'user': `user@http://localhost:3001/remoteEntry.js`,
+        'card': `card@http://localhost:3002/remoteEntry.js`,
+      },
+      exposes: {},
+      shared: {
+        ...deps,
+        react: {
+          singleton: true,
+          requiredVersion: deps.react,
+        },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: deps["react-dom"],
+        },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: deps["react-router-dom"],
+        },
+        'shared_shared': {
+          import: 'shared_shared',
+          singleton: true,
+          eager: false,
+          requiredVersion: require('../shared/package.json').version,
+        },
+      },
+    }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
