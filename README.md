@@ -25,4 +25,4 @@
 * Card – модуль управления фотографиями
 
 # Задание 2
- Схема с заданием: [draw.io](https://github.com/grm000/architecture-sprint-1/sprint_1/arch_template_task2_r_galeev.drawio)
+ Схема с заданием: [draw.io](https://github.com/grm000/architecture-sprint-1/blob/sprint_1/arch_template_task2_r_galeev.drawio)
