@@ -260,5 +260,7 @@ sketch
 # Ignore all local history of files
 .history
 .ionide
+.bkp
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode,jetbrains+all
+/.$arch_template_task2_r_galeev.drawio.bkp
