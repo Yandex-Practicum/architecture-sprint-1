@@ -49,7 +49,7 @@ module.exports = {
         "./AddPlacePopup": "./src/components/AddPlacePopup.js",
         "./ImagePopup": "./src/components/ImagePopup.js",
         "./PostsFeed": "./src/components/PostsFeed.js",
-        "./api": "./src/utils/api.js",
+        "./postApi": "./src/utils/postApi.js",
       },
       shared: ["react", "react-dom"],
     }),

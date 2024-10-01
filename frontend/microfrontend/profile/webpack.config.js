@@ -48,7 +48,7 @@ module.exports = {
       exposes: {
         "./EditAvatarPopup": "./src/components/EditAvatarPopup.js",
         "./EditProfilePopup": "./src/components/EditProfilePopup.js",
-        "./api": "./src/utils/api.js",
+        "./profileApi": "./src/utils/profileApi.js",
       },
       shared: ["react", "react-dom"],
     }),

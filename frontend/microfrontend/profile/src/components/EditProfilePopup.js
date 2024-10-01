@@ -1,6 +1,6 @@
 import React from 'react';
 import PopupWithForm from './PopupWithForm';
-import api from "../utils/api";
+import api from "../utils/profileApi";
 
 function EditProfilePopup({ currentUser, isOpen, handleUpdateUserSuccess, onClose }) {
   const [name, setName] = React.useState('');

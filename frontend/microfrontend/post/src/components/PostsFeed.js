@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import api from "../utils/api";
+import postApi from "../utils/postApi";
 
 function PostsFeed({
   currentUser,
@@ -17,7 +17,7 @@ function PostsFeed({
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     console.log("isLiked", card, isLiked, currentUser._id);
-    api
+    postApi
       .changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {
         const result = cards.map((c) => (c._id === card._id ? newCard : c));
@@ -28,7 +28,7 @@ function PostsFeed({
   }
 
   function handleCardDelete(card) {
-    api
+    postApi
       .removeCard(card._id)
       .then(() => {
         const result = cards.filter((c) => c._id !== card._id);
