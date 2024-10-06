@@ -16,6 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Login to Yandex Cloud Container Registry
+        id: login-cr
+        uses: yc-actions/yc-cr-login@v1
+        with:
+          yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
+
       - name: Set up Docker
         uses: docker/setup-buildx-action@v3
 
