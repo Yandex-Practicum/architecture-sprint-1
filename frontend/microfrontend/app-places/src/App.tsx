@@ -5,7 +5,7 @@ import './index.css'
 
 const App = () => (
   <div className="container">
-    <div>Name: app-photos</div>
+    <div>Name: app-places</div>
     <div>Framework: react</div>
     <div>Language: TypeScript</div>
     <div>CSS: Empty CSS</div>

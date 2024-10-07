@@ -1,5 +1,5 @@
 {
-  "name": "app-photos",
+  "name": "app-places",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",

@@ -62,7 +62,7 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "app_photos",
+      name: "app_places",
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {},
