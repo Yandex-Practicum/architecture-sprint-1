@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
@@ -8,6 +9,8 @@ const deps = require("./package.json").dependencies;
 const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
+  // mode: mode ?? "development",
+  entry: path.resolve(__dirname, 'src', 'app', 'index.ts'),
   output: {
     publicPath: "http://localhost:8080/",
   },
@@ -57,6 +60,10 @@ module.exports = (_, argv) => ({
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.svg$/i,
+        type: 'asset/resource',
+      }
     ],
   },
 
@@ -79,8 +86,10 @@ module.exports = (_, argv) => ({
       },
     }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: path.resolve(__dirname, 'public', 'index.html'),
+      // favicon: path.resolve(paths.public, "favicon.png"),
+      publicPath: "/",
     }),
-    new Dotenv()
+    new Dotenv(),
   ],
 });
