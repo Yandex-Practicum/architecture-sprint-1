@@ -27,3 +27,5 @@
 - **Сервис аналитики** - аналитика по заказам и апелляциям
 
 - **Сервис технической поддержки** - ведение тикетов технической поддержки
+
+https://github.com/mikhail-zsorokin/architecture-sprint-1/blob/sprint_1/arch_task2.drawio
