@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, useHistory, Switch } from "react-router-dom";
 import Header from "./Header";
-import Main from "../../../app-places/src/components/Main";
+import Places from "../../../app-places/src/components/Places";
 import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "../../../app-places/src/components/ImagePopup";
@@ -186,7 +186,7 @@ function App() {
           <ProtectedRoute
             exact
             path="/"
-            component={Main}
+            component={Places}
             cards={cards}
             onEditProfile={handleEditProfileClick}
             onAddPlace={handleAddPlaceClick}
