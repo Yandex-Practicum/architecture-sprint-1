@@ -18,7 +18,7 @@
 `frontend.src.components.AddPlacePopup.js`
 `frontend.src.components.Card.js`
 `frontend.src.components.ImagePopup.js`
-`frontend.src.components.PopupWithForm`
+`frontend.src.components.PopupWithForm.js`
 - Просмотр и редактирование профиля пользователей
 `frontend.src.components.EditProfilePopup.js`
 `frontend.src.components.EditAvatarPopup.js`
@@ -57,3 +57,82 @@
 5. `landing` - Сервис для общих компонентов
 - Хедер
 - футер
+
+Примерная структура проекта для каждого микрофронтенда:
+```
+/places-microfrontend
+  /src
+    /blocks
+        /places/*
+        /card/*  // все кроме лайков
+        /popup/*
+    /components
+      App.js
+      AddPlacePopup.js
+      Card.js
+      ImagePopup.js
+      PopupWithForm.js
+    /utils
+      api.js
+    index.js
+  package.json
+
+/users-microfrontend
+  /src
+    /blocks
+        /profile/*
+        /popup/*
+    /components
+      EditProfilePopup.js
+      EditAvatarPopup.js
+      PopupWithForm.js
+    /utils
+      api.js
+    index.js
+  package.json
+  
+/likes-microfrontend
+  /src
+    /blocks
+        /card/*  // все что касается лайков
+        /popup/*
+    /components
+      App.js
+      Card.js
+    /utils
+      api.js
+    index.css
+    index.js
+  package.json
+  
+/auth-microfrontend
+  /src
+    /blocks
+        /login/*
+        /auth-form/*
+    /components
+      App.js
+      InfoTooltip.js
+      Login.js
+      Register.js
+    /utils
+      auth.js
+    index.css
+    index.js
+  package.json
+  
+/landing-microfrontend
+  /src
+    /blocks
+        /footer/*
+        /header/*
+    /components
+      App.js
+      Header.js
+      Footer.js
+    /utils
+      auth.js
+    index.css
+    index.js
+  package.json
+```
