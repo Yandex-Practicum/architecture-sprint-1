@@ -1,0 +1,72 @@
+.profile__image {
+  width: 120px;
+  height: 120px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 29px 0 0;
+}
+
+.profile__image:hover {
+  cursor: pointer;
+}
+
+.profile__image::before,
+.profile__image::after {
+  content: '';
+  position: absolute;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.profile__image::before {
+  background: rgba(0, 0, 0, 0);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.profile__image::after {
+  width: 26px;
+  height: 26px;
+  background-image: url('../../../images/edit-icon.svg');
+  -webkit-background-size: contain;
+  background-size: contain;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.profile__image:hover::before {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.profile__image:hover::after {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 740px) {
+  .profile__image {
+    margin: 0 10px 0 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile__image {
+    margin-right: 0;
+  }
+}
