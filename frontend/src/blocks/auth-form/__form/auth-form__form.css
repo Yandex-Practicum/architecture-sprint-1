@@ -1,6 +1,0 @@
-.auth-form__form {
-  display: flex;
-  flex-direction: column;
-  min-height: 60vh;
-  justify-content: space-between;
-}
